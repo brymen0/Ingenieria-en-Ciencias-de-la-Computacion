@@ -1,0 +1,13 @@
+Juego 2
+Nombre jugador:Juan
+Puntaje Juan: 17
+Puntaje COMPUTADORA: 19
+
+Juego 1
+Nombre jugador:Alex
+Puntaje Alex: 29
+Puntaje COMPUTADORA: 26
+Juego 2
+Nombre jugador:Jorge
+Puntaje Jorge: 17
+Puntaje COMPUTADORA: 19

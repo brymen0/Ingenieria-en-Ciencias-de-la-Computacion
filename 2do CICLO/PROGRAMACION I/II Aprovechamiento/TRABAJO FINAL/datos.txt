@@ -1,0 +1,10 @@
+0104060900, Maria, Barahona, Secretaria, 8, 150
+0150367365, Bryan, Mendoza, Programador, 10, 150
+0103906905, Jorge, Mendoza, Chofer, 7, 200
+0151521937, Juan, Mendoza, Pasante, 5, 180
+0150348845, Alex, Mendoza, Personal Limpieza, 5, 140
+0104060900, Carmen, Once, Receptora, 6, 190
+0150367365, Steven, Barahona, Portero, 7, 180
+0103906905, Gustavo , Farfan, Guardia, 6, 200
+0150348845, Mateo, Barahona, Jefe, 15, 100
+0151521937, Jose, Barahona, Ayudante, 4, 145
