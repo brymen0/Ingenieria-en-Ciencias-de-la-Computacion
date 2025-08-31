@@ -1,0 +1,6 @@
+[submodule "5to CICLO/LENGUAJES DE PROGRAMACIÓN/Trabajo Final/Python/Mendoza_Bryan_Reserva_Restaurante"]
+	path = 5to CICLO/LENGUAJES DE PROGRAMACIÓN/Trabajo Final/Python/Mendoza_Bryan_Reserva_Restaurante
+	url = https://github.com/brymen0/Sistema-de-Reservas-de-Restaurante-en-Python
+[submodule "5to CICLO/LENGUAJES DE PROGRAMACIÓN/Trabajo Final/Scala/Mendoza_Bryan_TrabajoFinal"]
+	path = 5to CICLO/LENGUAJES DE PROGRAMACIÓN/Trabajo Final/Scala/Mendoza_Bryan_TrabajoFinal
+	url = https://github.com/brymen0/Sistema-de-Pedidos-de-Restaurante-en-Scala
