@@ -1,0 +1,5 @@
+1) Deducir la formula de la ley de Kepler
+2) Calcular el numero de armicos 
+3) Calcular la velocidad de transmisión, dado la frecuencia y el número de bits
+4) Dibujar la representación de datos analogicos en transmisión analogica
+5) Ejericio de PCM con muestras PAM

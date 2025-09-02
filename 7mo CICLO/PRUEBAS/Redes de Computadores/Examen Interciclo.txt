@@ -1,0 +1,4 @@
+1) Escriba las tecnologías existentes en la última milla
+2) Escriba los aspectos para el diseño de capas
+3) Escriba las bases para la creación del modelo OSI
+4) Calcule la serie de Fourier de 01100010 y los primeros 4 terminos de RMS (sin calculadora)

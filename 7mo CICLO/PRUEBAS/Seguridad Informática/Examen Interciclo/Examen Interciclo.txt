@@ -1,0 +1,10 @@
+1) Que es defensa en profundidad
+2) Qué es el ataque de hombre en el medio
+3) Qué tipo de seguridad dan los algoritmos criptograficos
+4) Explique el algortimo de Feisel y su utilidad
+5) Que es TLS, en que capa del modelo TCP/IP se encuentra y liste sus subprotocolos
+6) Como ocurre la autenticacion de usuario usando crifado de clave publica y mediante funciones hash
+7) Que es una funcion unidireccional y una funcion trampa
+8) Que es una función de hash y como funciona
+9) Algoritmo ElGamal - Autenticidad/Firma
+p = 17, e = 3, xA = 4, yA = 13, xB = 7, yB = 11, k = 11, M = 10

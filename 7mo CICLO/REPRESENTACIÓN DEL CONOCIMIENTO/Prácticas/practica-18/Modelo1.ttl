@@ -1,0 +1,81 @@
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+<http://example.org/tieneNombre>
+        rdf:type     owl:DatatypeProperty;
+        rdfs:domain  <http://example.org/Persona>;
+        rdfs:range   xsd:string .
+
+<http://example.org/Mujer>
+        rdf:type         owl:Class;
+        rdfs:subClassOf  <http://example.org/Persona> .
+
+<http://example.org/Persona4>
+        rdf:type  <http://example.org/Mujer>;
+        <http://example.org/esCasadoCon>
+                <http://example.org/Persona2>;
+        <http://example.org/tieneNombre>
+                "Rosario Castillo" .
+
+<http://example.org/Persona2>
+        rdf:type                        <http://example.org/Hombre>;
+        <http://example.org/esHermanoDe>
+                <http://example.org/Persona3>;
+        <http://example.org/tieneEdad>  "46"^^xsd:int;
+        <http://example.org/tieneNombre>
+                "Angel Perez" .
+
+<http://example.org/esHijoDe>
+        rdf:type     owl:ObjectProperty;
+        rdfs:domain  <http://example.org/Persona>;
+        rdfs:range   <http://example.org/Persona> .
+
+<http://example.org/esHermanoDe>
+        rdf:type     owl:ObjectProperty;
+        rdfs:domain  <http://example.org/Persona>;
+        rdfs:range   <http://example.org/Persona> .
+
+<http://example.org/Persona>
+        rdf:type             owl:Class;
+        owl:equivalentClass  [ rdf:type     owl:Class;
+                               owl:unionOf  ( <http://example.org/Hombre> <http://example.org/Mujer> )
+                             ] .
+
+<http://example.org/Hombre>
+        rdf:type          owl:Class;
+        rdfs:subClassOf   <http://example.org/Persona>;
+        owl:disjointWith  <http://example.org/Mujer> .
+
+<http://example.org/esCasadoCon>
+        rdf:type     owl:ObjectProperty;
+        rdfs:domain  <http://example.org/Persona>;
+        rdfs:range   <http://example.org/Persona> .
+
+<http://example.org/esPadreDe>
+        rdf:type     owl:ObjectProperty;
+        rdfs:domain  <http://example.org/Persona>;
+        rdfs:range   <http://example.org/Persona> .
+
+[ rdf:type             owl:AllDifferent;
+  owl:distinctMembers  ( <http://example.org/Persona1> <http://example.org/Persona2> <http://example.org/Persona3> <http://example.org/Persona4> )
+] .
+
+<http://example.org/tieneEdad>
+        rdf:type     owl:DatatypeProperty;
+        rdfs:domain  <http://example.org/Persona>;
+        rdfs:range   xsd:int .
+
+<http://example.org/Persona3>
+        rdf:type                        <http://example.org/Hombre>;
+        <http://example.org/tieneEdad>  "44"^^xsd:int;
+        <http://example.org/tieneNombre>
+                "Vinicio Perez" .
+
+<http://example.org/Persona1>
+        rdf:type                        <http://example.org/Hombre>;
+        <http://example.org/esPadreDe>  <http://example.org/Persona3> , <http://example.org/Persona2>;
+        <http://example.org/tieneEdad>  "75"^^xsd:int;
+        <http://example.org/tieneNombre>
+                "Juan Perez" .

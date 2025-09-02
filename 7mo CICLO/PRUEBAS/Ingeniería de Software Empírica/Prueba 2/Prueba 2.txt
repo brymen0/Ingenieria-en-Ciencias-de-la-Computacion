@@ -1,0 +1,7 @@
+Escribir 
+ - Tipo de estudio (descriptivo, explicativo, explotatorio, experimental)
+ - Partes del protocolo
+ - Tipo de protocolo (Fijo o flexible)
+ - Usa preguntas de investigación o hipotesis
+ - Ejemplo
+De caso de estudio, revisión sistematica, experimento y encuesta

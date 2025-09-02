@@ -1,0 +1,77 @@
+estoy haciendo una revision sistematica sobre la computacion afectiva orientada a espacios/entornos fisicos.
+Estas son las =preguntas de investigación con sus respectivos criterios de extraccion:
+RQ1: How are artificial intelligence algorithms being used in emotion recognition for the architectural design of physical spaces?
+EC1:	Single-modal Affect Recognition 
+        Text sentiment analysis 
+		Audio emotion recognition
+		Visual emotion recognition
+		Physiological-based emotion recognition
+EC2:	Architectural approaches
+        Geometry 
+		Experience of space and its geography
+		Philosophy of physical spaces
+		Psychology of a physical environment
+		Experience-based design
+RQ2: What types of architectural stimuli are being analyzed in affective computing studies to assess their impact on human emotional responses? 
+EC3	Emotion recognition method based on measurement of electrical parameters[2]	Based on direct sensors
+		Based on modular sensors
+EC4	Emotion recognition method based on the measurement of non-electrical parameters[2]	Contact measurements
+		Non-contact measurements
+EC5:	Perception and organization of elements
+        Proximity 
+		Similarity
+		Figure and ground
+		Closure
+		Continuity
+EC6:	Psychological aspects applied to art
+        Symmetry 
+		Visual point
+		Color
+		Complexity
+		Proportion
+		Order
+EC7:	Models of emotion assessment
+        Russel’s Circumplex Model 
+		Dimensional Models
+		Discrete Categories
+RQ3: What artificial intelligence algorithms are being used to interpret human emotions in relation to the physical environment?  
+EC8:	Function of the algorithm 
+	    Classification 
+		Clustering
+		Regression
+		Real-time detection
+EC9:	AI Algorithms 	
+        Neural Network  
+		Support Vector Machine(SVM)
+		K-Nearest Neighbors(KNN)
+		Ensemble Methods
+		Deep Learning
+		Others
+		None or No specific 
+
+RQ4: How is research being conducted in this area? 
+EC10:	Phase(s) in the which the studies are based	
+        Analysis 
+		Design
+		Implementation
+		Testing
+EC11:	Type of validation	
+        Proof of concepts 
+		Survey
+		Experiment
+		Study case
+		Quasi experiment
+		None or No specification
+		Others
+EC12:	Approach scope	
+        Industry 
+		Academy
+EC13:	Methodology	
+        New 
+		Extension
+EC14:	Year	
+       Year
+vademas mi criterio de exclusion mas importante es  estudios que no involucran espacios/entornos fisicos o diseño de espacios/entornos
+tambien quiero que se acepte si se prueba o el testing se hace en algun entorno fisico
+
+de este articulo, primero dime si se incluye o se excluye segun el criterio de exclusion y dame con que criterios de extraccion cumple

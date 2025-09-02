@@ -1,0 +1,216 @@
+@prefix : <http://www.example.org/familiasimpsons#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.example.org/familiasimpsons> .
+
+<http://www.example.org/familiasimpsons> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.example.org/familiasimpsons#tieneConyugue
+:tieneConyugue rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/familiasimpsons#tieneHermana
+:tieneHermana rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/familiasimpsons#tieneHermano
+:tieneHermano rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/familiasimpsons#tieneMadre
+:tieneMadre rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/familiasimpsons#tieneMiembroFamilia
+:tieneMiembroFamilia rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/familiasimpsons#tienePadre
+:tienePadre rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/familiasimpsons#tienePadres
+:tienePadres rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.example.org/familiasimpsons#tieneEdad
+:tieneEdad rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:integer .
+
+
+###  http://www.example.org/familiasimpsons#tieneNombre
+:tieneNombre rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.example.org/familiasimpsons#Familia
+:Familia rdf:type owl:Class .
+
+
+###  http://www.example.org/familiasimpsons#Hombre
+:Hombre rdf:type owl:Class ;
+        rdfs:subClassOf foaf:Person .
+
+
+###  http://www.example.org/familiasimpsons#Mujer
+:Mujer rdf:type owl:Class ;
+       rdfs:subClassOf foaf:Person .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.example.org/familiasimpsons#Abraham
+:Abraham rdf:type owl:NamedIndividual ,
+                  :Hombre ,
+                  foaf:Person ;
+         :tieneConyugue :Mona .
+
+
+###  http://www.example.org/familiasimpsons#Bart
+:Bart rdf:type owl:NamedIndividual ,
+               :Hombre ,
+               foaf:Person ;
+      :tieneMadre :Marge ;
+      :tienePadre :Homer ;
+      :tieneEdad 10 ;
+      :tieneNombre "Bart Simpson" .
+
+
+###  http://www.example.org/familiasimpsons#Clancy
+:Clancy rdf:type owl:NamedIndividual ,
+                 :Hombre ,
+                 foaf:Person ;
+        :tieneConyugue :Jacqueline .
+
+
+###  http://www.example.org/familiasimpsons#Herb
+:Herb rdf:type owl:NamedIndividual ,
+               :Hombre ,
+               foaf:Person ;
+      :tieneHermano :Homer .
+
+
+###  http://www.example.org/familiasimpsons#Homer
+:Homer rdf:type owl:NamedIndividual ,
+                :Hombre ,
+                foaf:Person ;
+       :tieneConyugue :Marge ;
+       :tieneHermano :Herb ;
+       :tieneMadre :Mona ;
+       :tienePadre :Abraham ;
+       :tieneEdad 36 ;
+       :tieneNombre "Homer Simpson" .
+
+
+###  http://www.example.org/familiasimpsons#Jacqueline
+:Jacqueline rdf:type owl:NamedIndividual ,
+                     :Mujer ,
+                     foaf:Person ;
+            :tieneConyugue :Clancy ;
+            :tieneNombre "Jacqueline Bouvier" .
+
+
+###  http://www.example.org/familiasimpsons#Ling
+:Ling rdf:type owl:NamedIndividual ,
+               :Mujer ,
+               foaf:Person ;
+      :tieneMadre :Selma ;
+      :tieneNombre "Ling Bouvier" .
+
+
+###  http://www.example.org/familiasimpsons#Lisa
+:Lisa rdf:type owl:NamedIndividual ,
+               :Mujer ,
+               foaf:Person ;
+      :tieneHermana :Maggie ;
+      :tieneHermano :Bart ;
+      :tieneMadre :Marge ;
+      :tienePadre :Homer ;
+      :tieneEdad 8 ;
+      :tieneNombre "Lisa Simpson" .
+
+
+###  http://www.example.org/familiasimpsons#Maggie
+:Maggie rdf:type owl:NamedIndividual ,
+                 :Mujer ,
+                 foaf:Person ;
+        :tieneMadre :Marge ;
+        :tienePadre :Homer ;
+        :tienePadres :Homer ,
+                     :Marge ;
+        :tieneEdad 1 ;
+        :tieneNombre "Maggie Simpson" .
+
+
+###  http://www.example.org/familiasimpsons#Marge
+:Marge rdf:type owl:NamedIndividual ,
+                :Mujer ,
+                foaf:Person ;
+       :tieneConyugue :Homer ;
+       :tieneHermana :Patty ,
+                     :Selma ;
+       :tieneMadre :Jacqueline ;
+       :tieneEdad 34 ;
+       :tieneNombre "Marge Simpson" .
+
+
+###  http://www.example.org/familiasimpsons#Mona
+:Mona rdf:type owl:NamedIndividual ,
+               :Mujer ,
+               foaf:Person ;
+      :tieneConyugue :Abraham ;
+      :tieneNombre "Mona Simpson" .
+
+
+###  http://www.example.org/familiasimpsons#Patty
+:Patty rdf:type owl:NamedIndividual ,
+                :Mujer ,
+                foaf:Person ;
+       :tieneHermana :Marge ,
+                     :Selma ;
+       :tieneMadre :Jacqueline ;
+       :tieneNombre "Patty Bouvier" .
+
+
+###  http://www.example.org/familiasimpsons#Selma
+:Selma rdf:type owl:NamedIndividual ,
+                :Mujer ,
+                foaf:Person ;
+       :tieneHermana :Marge ,
+                     :Patty ;
+       :tieneNombre "Selma Bouvier" .
+
+
+###  http://www.example.org/familiasimpsons#Simpsons
+:Simpsons rdf:type owl:NamedIndividual ,
+                   :Familia ;
+          :tieneMiembroFamilia :Bart ,
+                               :Homer ,
+                               :Lisa ,
+                               :Maggie ,
+                               :Marge .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

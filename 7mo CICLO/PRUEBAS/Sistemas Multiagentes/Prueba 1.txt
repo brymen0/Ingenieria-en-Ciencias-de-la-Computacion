@@ -1,0 +1,9 @@
+Considere como escenario para el diseño de un agente inteligente, un consultorio médico, donde se tiene el médico, un asistente, los pacientes y los horarios de atención.
+
+1)  Decida el tipo de agente a usar, justifique su decisión y realice un diagrama que muestre su arquitectura (diagrama según el tipo de agente seleccionado)
+
+2) Usando PEAS diseñe el agente
+
+Entregable:
+
+- Documento en PDF con la solución solicitada

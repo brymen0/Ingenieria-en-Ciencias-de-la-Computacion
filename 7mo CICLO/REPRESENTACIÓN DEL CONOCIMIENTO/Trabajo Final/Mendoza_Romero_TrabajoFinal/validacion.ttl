@@ -1,0 +1,197 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix :   <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#>
+
+:PersonShape a sh:NodeShape ;
+    sh:targetClass :Persona ; 
+    sh:property  :PersonaNombreShape;
+    sh:property  :PersonaEdadShape.
+
+:PersonaEdadShape a sh:PropertyShape;
+    sh:path  :tieneEdad;
+    sh:minCount  1;
+    sh:maxCount  1;
+    sh:datatype  xsd:integer;
+    sh:message "La persona debe tener 1 edad".
+
+:PersonaNombreShape a sh:PropertyShape;
+    sh:path  :tieneNombre;
+    sh:minCount  1;
+    sh:maxCount  1;
+    sh:datatype  xsd:string;
+    sh:message "La persona debe tener 1 nombre".
+
+:VueloShape a sh:NodeShape;
+    sh:targetClass  :Vuelo;
+    sh:property  :VueloPilotoShape;
+    sh:property  :VueloCopilotoShape;
+    sh:property  :FechaVueloShape;
+    sh:property  :HoraSalidaShape;
+    sh:property  :HoraLlegadaShape;
+    sh:property  :PrecioBaseShape;
+    sh:property  :CiudadDestinoShape;
+    sh:property  :CiudadOrigenShape.
+
+:CiudadDestinoShape a sh:PropertyShape;  
+    sh:path :tieneDestino;
+    sh:minCount  1;
+    sh:maxCount  1;
+    sh:class  :Ciudad;
+    sh:message "El vuelo debe tener una ciudad de destino".
+
+:CiudadOrigenShape a sh:PropertyShape;  
+    sh:path :tieneOrigen;
+    sh:minCount  1;
+    sh:maxCount  1;
+    sh:class  :Ciudad;
+    sh:message "El vuelo debe tener una ciudad de origen".
+
+:PrecioBaseShape a sh:PropertyShape;  
+    sh:path :precioBase;
+    sh:minCount  1;
+    sh:maxCount  1;
+    sh:datatype  xsd:float;
+    sh:message "El vuelo debe tener un precio base".
+
+:VueloPilotoShape a sh:PropertyShape;  
+    sh:path :pilotoAsignado;
+    sh:minCount  1;
+    sh:maxCount  1;
+    sh:class  :Piloto;
+    sh:message "El vuelo debe tener un piloto".
+
+:VueloCopilotoShape a sh:PropertyShape;  
+    sh:path :copilotoAsignado;
+    sh:minCount  1;
+    sh:maxCount  1;
+    sh:class  :Piloto;
+    sh:message "El vuelo debe tener un copiloto".
+
+:FechaVueloShape a sh:PropertyShape;
+    sh:path  :fecha;
+    sh:minCount  1;
+    sh:maxCount  1;
+    sh:datatype  xsd:date;
+    sh:message "El vuelo debe tener una fecha".
+
+:HoraSalidaShape a sh:PropertyShape;
+    sh:path  :horaSalida;
+    sh:minCount  1;
+    sh:maxCount  1;
+    sh:datatype  xsd:time;
+    sh:message "El vuelo debe tener una hora de salida".
+
+:HoraLlegadaShape a sh:PropertyShape;
+    sh:path  :horaLlegada;
+    sh:minCount  1;
+    sh:maxCount  1;
+    sh:datatype  xsd:time;
+    sh:message "El vuelo debe tener una hora de llegada".
+
+:PilotoShape a sh:NodeShape;
+    sh:targetClass  :Piloto;
+    sh:property  :HabilitacionShape;
+    sh:property  :TrabajaParaShape.
+
+:HabilitacionShape a sh:PropertyShape;
+   sh:path  :tieneHabilitacion;
+   sh:minCount  1;
+   sh:class  :Habilitacion;
+   sh:message "Un piloto debe tener mínimo 1 habilitación".
+
+:TrabajaParaShape a sh:PropertyShape;
+    sh:path  :trabajaPara;
+    sh:maxCount  1;
+    sh:class  :Aerolinea;
+    sh:message "Un piloto solo puede trabajar para máximo 1 aerolinea".
+
+:BoletoShape a sh:NodeShape;
+    sh:targetClass  :Boleto;
+    sh:property  :BoletoClaseServicioShape;
+    sh:property  :BoletoVueloShape;
+    sh:property  :LlevaMascotaShape.
+
+:LlevaMascotaShape a sh:PropertyShape;
+    sh:path  :llevaMascota; 
+    sh:maxCount  1;
+    sh:datatype  xsd:boolean;
+    sh:message "El boleto solo puede especificar 1 vez si lleva mascota".
+
+:BoletoVueloShape a sh:PropertyShape; 
+    sh:path :perteneceAVuelo;
+    sh:minCount  1;
+    sh:maxCount  1;
+    sh:class  :Vuelo;
+    sh:message "Un boleto solo puede pertencer a 1 vuelo".
+
+:BoletoClaseServicioShape a sh:PropertyShape; 
+    sh:path :claseAsiento;
+    sh:minCount  1;
+    sh:maxCount  1;
+    sh:class  :ClaseServicio;
+    sh:message "Un boleto solo puede tener 1 clase de asiento/servicio".
+
+:AvionShape a sh:NodeShape;
+    sh:targetClass  :Avion;
+    sh:property  :AvionClaseServicioShape;
+    sh:property  :HabilitacionAvionShape;
+    sh:property  :CapacidadAvionShape.
+
+:CapacidadAvionShape a sh:PropertyShape;
+    sh:path :tieneCapacidad;
+    sh:minInclusive  2;
+    sh:datatype  xsd:integer; 
+    sh:message "Un avión debe tener una capacidad mínima para 2 personas".
+
+:HabilitacionAvionShape a sh:PropertyShape; 
+    sh:path :requiereHabilitacion;
+    sh:minCount  1;
+    sh:class  :Habilitacion;
+    sh:message "Un avión requiere mínimo 1 habilitacion".
+
+:AvionClaseServicioShape a sh:PropertyShape; 
+    sh:path :tieneClase;
+    sh:minCount  1;
+    sh:class  :ClaseServicio;
+    sh:message "Un avión tiene mínimo 1 clase de servicio".
+
+:AerolineaShape a sh:NodeShape;
+    sh:targetClass  :Aerolinea;
+    sh:property  :CapacidadAerolineaShape;
+    sh:property  :PilotosAerolineaShape.
+
+:PilotosAerolineaShape a sh:PropertyShape;
+    sh:path  :tienePiloto;
+    sh:minCount  2;
+    sh:class  :Piloto;
+    sh:message "La aerolinea debe tener mínimo 2 pilotos".
+
+
+:CapacidadAerolineaShape a sh:PropertyShape;
+    sh:path  :tieneAvion;
+    sh:minCount  2;
+    sh:class  :Avion;
+    sh:message "La aerolinea debe tener mínimo 2 aviones".
+
+:EquipajeShape a sh:NodeShape;
+    sh:targetClass  :Equipaje;
+    sh:property  :EquipajePesoShape.
+
+:EquipajePesoShape a sh:PropertyShape;
+    sh:path  :tienePeso;
+    sh:minCount  1;
+    sh:maxCount  1; 
+    sh:datatype  xsd:integer;
+    sh:message "El equipaje debe tener un peso".
+
+:PasajeroShape a sh:NodeShape;
+    sh:targetClass  :Pasajero;
+    sh:property  :PasajeroBoletoShape.
+
+:PasajeroBoletoShape a sh:PropertyShape;
+    sh:path  :tieneBoleto;
+    sh:minCount  1;
+    sh:class  :Boleto;
+    sh:message "El pasajero debe tener al menos un boleto".

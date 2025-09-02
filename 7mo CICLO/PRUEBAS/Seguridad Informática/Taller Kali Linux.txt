@@ -1,0 +1,3 @@
+1. Listar en un txt todas las ip's de los sitios web que se encuentran en la pagina web de la UCuenca
+2. Listar los puertos abiertos
+3. Realizar una captura de trafico de red con Wireshark

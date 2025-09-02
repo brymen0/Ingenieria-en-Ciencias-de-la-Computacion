@@ -1,0 +1,70 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:    <http://www.example.org/#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix :      <http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-17#>.
+
+:BandaShape a sh:NodeShape;
+    sh:targetClass :Banda;
+    sh:not [ sh:class :Persona];
+    sh:property :MiembroBandaShape.
+
+:MiembroBandaShape a sh:PropertyShape;
+    sh:path :tieneMiembro;
+    sh:minCount 1;
+    sh:class :Solista.
+
+:ArtistaShape a sh:NodeShape;
+    sh:targetClass :Artista;
+    sh:node :NombreShape.
+
+:AlbumShape a sh:NodeShape;
+    sh:targetClass :Album;
+    sh:node :NombreShape;
+    sh:not [ sh:class :Cancion]; 
+    sh:property :FechaLanzamientoAlbumShape;
+    sh:property :PistaAlbumShape;
+    sh:property :ArtistaAlbumShape.
+
+:PistaAlbumShape a sh:PropertyShape;
+    sh:path :tienePista;
+    sh:minCount 1;
+    sh:class :Cancion.
+
+:ArtistaAlbumShape a sh:PropertyShape;
+    sh:path :tieneArtista;
+    sh:minCount 1;
+    sh:class :Artista.
+
+:FechaLanzamientoAlbumShape a sh:PropertyShape;
+    sh:path :fechaLanzamiento;
+    sh:minCount 1;
+    sh:maxCount 1;
+    sh:datatype xsd:dateTime.
+
+:CancionShape a sh:NodeShape;
+    sh:targetClass :Cancion;
+    sh:node :NombreShape;
+    sh:property :DuracionCancionShape;
+    sh:property :CompositorCancionShape.
+
+:DuracionCancionShape a sh:PropertyShape;
+    sh:path :tiempoDuracion;
+    sh:minCount 1;
+    sh:maxCount 1;
+    sh:datatype xsd:integer.
+
+:CompositorCancionShape a sh:PropertyShape;
+    sh:path :tieneCompositor;
+    sh:minCount 1;
+    sh:class :Persona.
+
+:NombreShape a sh:NodeShape;
+    sh:property [
+        sh:path :nombre;
+        sh:minCount 1;
+        sh:maxCount 1;
+        sh:datatype xsd:string
+    ].

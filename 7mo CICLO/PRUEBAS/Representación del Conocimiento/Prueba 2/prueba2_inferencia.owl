@@ -1,0 +1,1017 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/bryan/ontologies/2025/5/untitled-ontology-18"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/bryan/ontologies/2025/5/untitled-ontology-18">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Ligera"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ubuntu18.04"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tieneResolucionVertical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Windows10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MacOsSheeta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VelocidadLenta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ComputadorPorPeso"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pesada"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Caro"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VelocidadMedia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Procesador"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tienePeso"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tieneResolucionHorizontal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tieneResolucion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneMemoriaRAM"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneMonitor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tieneVelocidad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Computador1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Economico"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tienePrecio"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Computador2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Computador3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disco"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RAM64"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CapacidadAlta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mac"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UltraLigera"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneProcesador"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Linux"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Software"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeProgramacion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Monitor1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CapacidadBaja"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MemoriaRAM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Monitor2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tieneCapacidad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Windows"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneDisco"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RAM16"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SD"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Monitor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Procesador2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VelocidadAlta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Procesador3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hardware"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Asequible"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Procesador1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeSistema"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneSistemaOperativo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RAM128"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Computador"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ComputadorPorValor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Disco1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Disco2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Disco3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HD"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SistemaOperativo"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Asequible"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Computador"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#tienePrecio"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">700</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1200</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CapacidadAlta"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Disco"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#tieneCapacidad"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">6</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CapacidadBaja"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Disco"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#tieneCapacidad"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">6</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Caro"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Computador"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#tienePrecio"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1200</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Computador"/>
+        <ObjectIntersectionOf>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#tieneDisco"/>
+                <Class IRI="#Disco"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#tieneMemoriaRAM"/>
+                <Class IRI="#MemoriaRAM"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#tieneSistemaOperativo"/>
+                <Class IRI="#SistemaOperativo"/>
+            </ObjectMinCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#tieneMonitor"/>
+                <Class IRI="#Monitor"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#tieneProcesador"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Economico"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Computador"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#tienePrecio"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">700</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HD"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Monitor"/>
+            <DataHasValue>
+                <DataProperty IRI="#tieneResolucionHorizontal"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1280</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#tieneResolucionVertical"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">720</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Ligera"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Computador"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#tienePeso"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:decimal"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">4</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">7</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Pesada"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Computador"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#tienePeso"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:decimal"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">7</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SD"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Monitor"/>
+            <DataHasValue>
+                <DataProperty IRI="#tieneResolucionHorizontal"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">640</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#tieneResolucionVertical"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">480</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#UltraLigera"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Computador"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#tienePeso"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:decimal"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">4</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VelocidadAlta"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Procesador"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#tieneVelocidad"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:decimal"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.6</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VelocidadLenta"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Procesador"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#tieneVelocidad"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:decimal"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.5</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VelocidadMedia"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Procesador"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#tieneVelocidad"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:decimal"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.5</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.7</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Asequible"/>
+        <Class IRI="#Computador"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CapacidadAlta"/>
+        <Class IRI="#Disco"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CapacidadBaja"/>
+        <Class IRI="#Disco"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Caro"/>
+        <Class IRI="#Computador"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ComputadorPorPeso"/>
+        <Class IRI="#Computador"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ComputadorPorValor"/>
+        <Class IRI="#Computador"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeProgramacion"/>
+        <Class IRI="#Software"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeSistema"/>
+        <Class IRI="#Software"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disco"/>
+        <Class IRI="#Hardware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Economico"/>
+        <Class IRI="#Computador"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HD"/>
+        <Class IRI="#Monitor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ligera"/>
+        <Class IRI="#Computador"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Linux"/>
+        <Class IRI="#SistemaOperativo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mac"/>
+        <Class IRI="#SistemaOperativo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MemoriaRAM"/>
+        <Class IRI="#Hardware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Monitor"/>
+        <Class IRI="#Hardware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pesada"/>
+        <Class IRI="#Computador"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Procesador"/>
+        <Class IRI="#Hardware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SD"/>
+        <Class IRI="#Monitor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SistemaOperativo"/>
+        <Class IRI="#DeSistema"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UltraLigera"/>
+        <Class IRI="#Computador"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VelocidadAlta"/>
+        <Class IRI="#Procesador"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VelocidadLenta"/>
+        <Class IRI="#Procesador"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VelocidadMedia"/>
+        <Class IRI="#Procesador"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Windows"/>
+        <Class IRI="#SistemaOperativo"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Computador"/>
+        <NamedIndividual IRI="#Computador1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Economico"/>
+        <NamedIndividual IRI="#Computador1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ligera"/>
+        <NamedIndividual IRI="#Computador1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asequible"/>
+        <NamedIndividual IRI="#Computador2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Computador"/>
+        <NamedIndividual IRI="#Computador2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UltraLigera"/>
+        <NamedIndividual IRI="#Computador2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Caro"/>
+        <NamedIndividual IRI="#Computador3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Computador"/>
+        <NamedIndividual IRI="#Computador3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pesada"/>
+        <NamedIndividual IRI="#Computador3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CapacidadAlta"/>
+        <NamedIndividual IRI="#Disco1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Disco"/>
+        <NamedIndividual IRI="#Disco1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hardware"/>
+        <NamedIndividual IRI="#Disco1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CapacidadBaja"/>
+        <NamedIndividual IRI="#Disco2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Disco"/>
+        <NamedIndividual IRI="#Disco2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hardware"/>
+        <NamedIndividual IRI="#Disco2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CapacidadAlta"/>
+        <NamedIndividual IRI="#Disco3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Disco"/>
+        <NamedIndividual IRI="#Disco3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hardware"/>
+        <NamedIndividual IRI="#Disco3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DeSistema"/>
+        <NamedIndividual IRI="#MacOsSheeta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mac"/>
+        <NamedIndividual IRI="#MacOsSheeta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SistemaOperativo"/>
+        <NamedIndividual IRI="#MacOsSheeta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Software"/>
+        <NamedIndividual IRI="#MacOsSheeta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hardware"/>
+        <NamedIndividual IRI="#Monitor1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Monitor"/>
+        <NamedIndividual IRI="#Monitor1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SD"/>
+        <NamedIndividual IRI="#Monitor1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HD"/>
+        <NamedIndividual IRI="#Monitor2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hardware"/>
+        <NamedIndividual IRI="#Monitor2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Monitor"/>
+        <NamedIndividual IRI="#Monitor2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hardware"/>
+        <NamedIndividual IRI="#Procesador1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Procesador"/>
+        <NamedIndividual IRI="#Procesador1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VelocidadMedia"/>
+        <NamedIndividual IRI="#Procesador1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hardware"/>
+        <NamedIndividual IRI="#Procesador2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Procesador"/>
+        <NamedIndividual IRI="#Procesador2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VelocidadLenta"/>
+        <NamedIndividual IRI="#Procesador2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hardware"/>
+        <NamedIndividual IRI="#Procesador3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Procesador"/>
+        <NamedIndividual IRI="#Procesador3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VelocidadAlta"/>
+        <NamedIndividual IRI="#Procesador3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hardware"/>
+        <NamedIndividual IRI="#RAM128"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MemoriaRAM"/>
+        <NamedIndividual IRI="#RAM128"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hardware"/>
+        <NamedIndividual IRI="#RAM16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MemoriaRAM"/>
+        <NamedIndividual IRI="#RAM16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hardware"/>
+        <NamedIndividual IRI="#RAM64"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MemoriaRAM"/>
+        <NamedIndividual IRI="#RAM64"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DeSistema"/>
+        <NamedIndividual IRI="#Windows10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SistemaOperativo"/>
+        <NamedIndividual IRI="#Windows10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Software"/>
+        <NamedIndividual IRI="#Windows10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Windows"/>
+        <NamedIndividual IRI="#Windows10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DeSistema"/>
+        <NamedIndividual IRI="#ubuntu18.04"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Linux"/>
+        <NamedIndividual IRI="#ubuntu18.04"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SistemaOperativo"/>
+        <NamedIndividual IRI="#ubuntu18.04"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Software"/>
+        <NamedIndividual IRI="#ubuntu18.04"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneDisco"/>
+        <NamedIndividual IRI="#Computador1"/>
+        <NamedIndividual IRI="#Disco2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneMemoriaRAM"/>
+        <NamedIndividual IRI="#Computador1"/>
+        <NamedIndividual IRI="#RAM16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneMonitor"/>
+        <NamedIndividual IRI="#Computador1"/>
+        <NamedIndividual IRI="#Monitor1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneProcesador"/>
+        <NamedIndividual IRI="#Computador1"/>
+        <NamedIndividual IRI="#Procesador2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneSistemaOperativo"/>
+        <NamedIndividual IRI="#Computador1"/>
+        <NamedIndividual IRI="#Windows10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneDisco"/>
+        <NamedIndividual IRI="#Computador2"/>
+        <NamedIndividual IRI="#Disco1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneMemoriaRAM"/>
+        <NamedIndividual IRI="#Computador2"/>
+        <NamedIndividual IRI="#RAM64"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneMonitor"/>
+        <NamedIndividual IRI="#Computador2"/>
+        <NamedIndividual IRI="#Monitor2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneProcesador"/>
+        <NamedIndividual IRI="#Computador2"/>
+        <NamedIndividual IRI="#Procesador1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneSistemaOperativo"/>
+        <NamedIndividual IRI="#Computador2"/>
+        <NamedIndividual IRI="#MacOsSheeta"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneDisco"/>
+        <NamedIndividual IRI="#Computador3"/>
+        <NamedIndividual IRI="#Disco3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneMemoriaRAM"/>
+        <NamedIndividual IRI="#Computador3"/>
+        <NamedIndividual IRI="#RAM128"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneMonitor"/>
+        <NamedIndividual IRI="#Computador3"/>
+        <NamedIndividual IRI="#Monitor2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneProcesador"/>
+        <NamedIndividual IRI="#Computador3"/>
+        <NamedIndividual IRI="#Procesador3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneSistemaOperativo"/>
+        <NamedIndividual IRI="#Computador3"/>
+        <NamedIndividual IRI="#ubuntu18.04"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tienePeso"/>
+        <NamedIndividual IRI="#Computador1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">4.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tienePrecio"/>
+        <NamedIndividual IRI="#Computador1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">550</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tienePeso"/>
+        <NamedIndividual IRI="#Computador2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tienePrecio"/>
+        <NamedIndividual IRI="#Computador2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1150</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tienePeso"/>
+        <NamedIndividual IRI="#Computador3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tienePrecio"/>
+        <NamedIndividual IRI="#Computador3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2550</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneCapacidad"/>
+        <NamedIndividual IRI="#Disco1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneCapacidad"/>
+        <NamedIndividual IRI="#Disco2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneCapacidad"/>
+        <NamedIndividual IRI="#Disco3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">32</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneResolucion"/>
+        <NamedIndividual IRI="#Monitor1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">480</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneResolucion"/>
+        <NamedIndividual IRI="#Monitor1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">640</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneResolucionHorizontal"/>
+        <NamedIndividual IRI="#Monitor1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">640</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneResolucionVertical"/>
+        <NamedIndividual IRI="#Monitor1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">480</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneResolucion"/>
+        <NamedIndividual IRI="#Monitor2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1280</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneResolucion"/>
+        <NamedIndividual IRI="#Monitor2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">720</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneResolucionHorizontal"/>
+        <NamedIndividual IRI="#Monitor2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1280</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneResolucionVertical"/>
+        <NamedIndividual IRI="#Monitor2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">720</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneVelocidad"/>
+        <NamedIndividual IRI="#Procesador1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneVelocidad"/>
+        <NamedIndividual IRI="#Procesador2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneVelocidad"/>
+        <NamedIndividual IRI="#Procesador3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">3.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneCapacidad"/>
+        <NamedIndividual IRI="#RAM128"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">128</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneCapacidad"/>
+        <NamedIndividual IRI="#RAM16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">16</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tieneCapacidad"/>
+        <NamedIndividual IRI="#RAM64"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">64</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneDisco"/>
+        <Class IRI="#Computador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneMemoriaRAM"/>
+        <Class IRI="#Computador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneMonitor"/>
+        <Class IRI="#Computador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneProcesador"/>
+        <Class IRI="#Computador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneSistemaOperativo"/>
+        <Class IRI="#Computador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneDisco"/>
+        <Class IRI="#Disco"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneMemoriaRAM"/>
+        <Class IRI="#MemoriaRAM"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneMonitor"/>
+        <Class IRI="#Monitor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneProcesador"/>
+        <Class IRI="#Procesador"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneSistemaOperativo"/>
+        <Class IRI="#SistemaOperativo"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#tieneResolucionHorizontal"/>
+        <DataProperty IRI="#tieneResolucion"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#tieneResolucionVertical"/>
+        <DataProperty IRI="#tieneResolucion"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tieneCapacidad"/>
+        <ObjectUnionOf>
+            <Class IRI="#Disco"/>
+            <Class IRI="#MemoriaRAM"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tienePeso"/>
+        <Class IRI="#Computador"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tienePrecio"/>
+        <Class IRI="#Computador"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tieneResolucion"/>
+        <Class IRI="#Monitor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tieneResolucionHorizontal"/>
+        <Class IRI="#Monitor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tieneResolucionVertical"/>
+        <Class IRI="#Monitor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tieneVelocidad"/>
+        <Class IRI="#Procesador"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#tieneCapacidad"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tienePeso"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tienePrecio"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tieneResolucion"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tieneResolucionHorizontal"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tieneResolucionVertical"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tieneVelocidad"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,6 @@
+Cual es le protocolo de gestion de red
+Cuales son los protocolos de seguridad que funcionan en la capa de aplicación
+Que abarca la seguridad informatica
+Unir sobre la ISO 27000, 31000 y 37000
+Unir sobre IPSec, IKE, IP over IP
+

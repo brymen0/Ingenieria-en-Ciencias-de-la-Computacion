@@ -1,0 +1,1219 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ejemplo.org/familia#"
+     xml:base="http://ejemplo.org/familia"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:familia="http://ejemplo.org/familia#">
+    <owl:Ontology rdf:about="http://ejemplo.org/familia"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ejemplo.org/familia#tieneAcompañante -->
+
+    <owl:ObjectProperty rdf:about="http://ejemplo.org/familia#tieneAcompañante">
+        <owl:inverseOf rdf:resource="http://ejemplo.org/familia#tieneAcompañante"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ejemplo.org/familia#tieneGenero -->
+
+    <owl:ObjectProperty rdf:about="http://ejemplo.org/familia#tieneGenero">
+        <rdfs:domain rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Femenino"/>
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Masculino"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ejemplo.org/familia#tieneHermana -->
+
+    <owl:ObjectProperty rdf:about="http://ejemplo.org/familia#tieneHermana"/>
+    
+
+
+    <!-- http://ejemplo.org/familia#tieneHermano -->
+
+    <owl:ObjectProperty rdf:about="http://ejemplo.org/familia#tieneHermano"/>
+    
+
+
+    <!-- http://ejemplo.org/familia#tieneHermanos -->
+
+    <owl:ObjectProperty rdf:about="http://ejemplo.org/familia#tieneHermanos"/>
+    
+
+
+    <!-- http://ejemplo.org/familia#tieneHijos -->
+
+    <owl:ObjectProperty rdf:about="http://ejemplo.org/familia#tieneHijos">
+        <owl:inverseOf rdf:resource="http://ejemplo.org/familia#tienePadres"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ejemplo.org/familia#tienePadres -->
+
+    <owl:ObjectProperty rdf:about="http://ejemplo.org/familia#tienePadres">
+        <rdfs:domain rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <rdfs:range rdf:resource="http://ejemplo.org/familia#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ejemplo.org/familia#tieneTia -->
+
+    <owl:ObjectProperty rdf:about="http://ejemplo.org/familia#tieneTia">
+        <rdfs:domain rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <rdfs:range rdf:resource="http://ejemplo.org/familia#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ejemplo.org/familia#tieneTio -->
+
+    <owl:ObjectProperty rdf:about="http://ejemplo.org/familia#tieneTio">
+        <rdfs:domain rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <rdfs:range rdf:resource="http://ejemplo.org/familia#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ejemplo.org/familia#Familiar -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Familiar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Hermanos"/>
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Hijos"/>
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Padres"/>
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Sobrina"/>
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Sobrino"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ejemplo.org/familia#Femenino -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Femenino">
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Genero"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ejemplo.org/familia#Genero -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Genero"/>
+    
+
+
+    <!-- http://ejemplo.org/familia#Hermana -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Hermana">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Hermanos"/>
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Mujer"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Hermanos"/>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Mujer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ejemplo.org/familia#Hermano -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Hermano">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Hermanos"/>
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Hombre"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Hermanos"/>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Hombre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ejemplo.org/familia#Hermanos -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Hermanos">
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ejemplo.org/familia#Hija -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Hija">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Hijos"/>
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Mujer"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Hijos"/>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Mujer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ejemplo.org/familia#Hijo -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Hijo">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Hijos"/>
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Hombre"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Hijos"/>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Hombre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ejemplo.org/familia#Hijos -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Hijos">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Persona"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ejemplo.org/familia#tienePadres"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://ejemplo.org/familia#Persona"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Familiar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ejemplo.org/familia#Hombre -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Hombre">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Persona"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ejemplo.org/familia#tieneGenero"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://ejemplo.org/familia#Masculino"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ejemplo.org/familia#Madre -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Madre">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Mujer"/>
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Padres"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Mujer"/>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Padres"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ejemplo.org/familia#Masculino -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Masculino">
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Genero"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ejemplo.org/familia#Mujer -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Mujer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Persona"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ejemplo.org/familia#tieneGenero"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://ejemplo.org/familia#Femenino"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ejemplo.org/familia#Padre -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Padre">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Hombre"/>
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Padres"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Hombre"/>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Padres"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ejemplo.org/familia#Padres -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Padres">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Persona"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ejemplo.org/familia#tieneHijos"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://ejemplo.org/familia#Persona"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Familiar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ejemplo.org/familia#Persona -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Persona">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Hombre"/>
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://ejemplo.org/familia#Sobrina -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Sobrina">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Mujer"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://ejemplo.org/familia#tieneTia"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://ejemplo.org/familia#Persona"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://ejemplo.org/familia#tieneTio"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://ejemplo.org/familia#Persona"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Mujer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ejemplo.org/familia#Sobrino -->
+
+    <owl:Class rdf:about="http://ejemplo.org/familia#Sobrino">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ejemplo.org/familia#Hombre"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://ejemplo.org/familia#tieneTia"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://ejemplo.org/familia#Persona"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://ejemplo.org/familia#tieneTio"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://ejemplo.org/familia#Persona"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdfs:subClassOf rdf:resource="http://ejemplo.org/familia#Hombre"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ejemplo.org/familia#Alexandra -->
+
+    <owl:NamedIndividual rdf:about="http://ejemplo.org/familia#Alexandra">
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Madre"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Mujer"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Padres"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <tieneAcompañante rdf:resource="http://ejemplo.org/familia#Vinicio"/>
+        <tieneGenero rdf:resource="http://ejemplo.org/familia#f"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Erika"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Valentina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ejemplo.org/familia#Charito -->
+
+    <owl:NamedIndividual rdf:about="http://ejemplo.org/familia#Charito">
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Madre"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Mujer"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Padres"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <tieneAcompañante rdf:resource="http://ejemplo.org/familia#Mauricio"/>
+        <tieneGenero rdf:resource="http://ejemplo.org/familia#f"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Cristina"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Sofia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ejemplo.org/familia#Cristian -->
+
+    <owl:NamedIndividual rdf:about="http://ejemplo.org/familia#Cristian">
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hijo"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hijos"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hombre"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <tieneGenero rdf:resource="http://ejemplo.org/familia#m"/>
+        <tieneHermana rdf:resource="http://ejemplo.org/familia#Veronica"/>
+        <tieneHermano rdf:resource="http://ejemplo.org/familia#Mauricio"/>
+        <tieneHermano rdf:resource="http://ejemplo.org/familia#Vinicio"/>
+        <tieneHermanos rdf:resource="http://ejemplo.org/familia#Mauricio"/>
+        <tieneHermanos rdf:resource="http://ejemplo.org/familia#Veronica"/>
+        <tieneHermanos rdf:resource="http://ejemplo.org/familia#Vinicio"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Jorge"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Maria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ejemplo.org/familia#Cristina -->
+
+    <owl:NamedIndividual rdf:about="http://ejemplo.org/familia#Cristina">
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hija"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hijos"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Mujer"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Sobrina"/>
+        <tieneHermana rdf:resource="http://ejemplo.org/familia#Sofia"/>
+        <tieneHermanos rdf:resource="http://ejemplo.org/familia#Sofia"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Charito"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Mauricio"/>
+        <tieneTia rdf:resource="http://ejemplo.org/familia#Veronica"/>
+        <tieneTio rdf:resource="http://ejemplo.org/familia#Cristian"/>
+        <tieneTio rdf:resource="http://ejemplo.org/familia#Vinicio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ejemplo.org/familia#Danilo -->
+
+    <owl:NamedIndividual rdf:about="http://ejemplo.org/familia#Danilo">
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hombre"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Padre"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Padres"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <tieneAcompañante rdf:resource="http://ejemplo.org/familia#Veronica"/>
+        <tieneGenero rdf:resource="http://ejemplo.org/familia#m"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Estefany"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ejemplo.org/familia#Erika -->
+
+    <owl:NamedIndividual rdf:about="http://ejemplo.org/familia#Erika">
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hija"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hijos"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Mujer"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Sobrina"/>
+        <tieneHermana rdf:resource="http://ejemplo.org/familia#Valentina"/>
+        <tieneHermanos rdf:resource="http://ejemplo.org/familia#Valentina"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Alexandra"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Vinicio"/>
+        <tieneTia rdf:resource="http://ejemplo.org/familia#Veronica"/>
+        <tieneTio rdf:resource="http://ejemplo.org/familia#Cristian"/>
+        <tieneTio rdf:resource="http://ejemplo.org/familia#Mauricio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ejemplo.org/familia#Estefany -->
+
+    <owl:NamedIndividual rdf:about="http://ejemplo.org/familia#Estefany">
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hija"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hijos"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Mujer"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Sobrina"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Danilo"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Veronica"/>
+        <tieneTio rdf:resource="http://ejemplo.org/familia#Cristian"/>
+        <tieneTio rdf:resource="http://ejemplo.org/familia#Mauricio"/>
+        <tieneTio rdf:resource="http://ejemplo.org/familia#Vinicio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ejemplo.org/familia#Jorge -->
+
+    <owl:NamedIndividual rdf:about="http://ejemplo.org/familia#Jorge">
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hombre"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Padre"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Padres"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <tieneAcompañante rdf:resource="http://ejemplo.org/familia#Maria"/>
+        <tieneGenero rdf:resource="http://ejemplo.org/familia#m"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Cristian"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Mauricio"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Veronica"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Vinicio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ejemplo.org/familia#Maria -->
+
+    <owl:NamedIndividual rdf:about="http://ejemplo.org/familia#Maria">
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Madre"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Mujer"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Padres"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <tieneAcompañante rdf:resource="http://ejemplo.org/familia#Jorge"/>
+        <tieneGenero rdf:resource="http://ejemplo.org/familia#f"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Cristian"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Mauricio"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Veronica"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Vinicio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ejemplo.org/familia#Mauricio -->
+
+    <owl:NamedIndividual rdf:about="http://ejemplo.org/familia#Mauricio">
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hijo"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hijos"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hombre"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Padre"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Padres"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <tieneAcompañante rdf:resource="http://ejemplo.org/familia#Charito"/>
+        <tieneGenero rdf:resource="http://ejemplo.org/familia#m"/>
+        <tieneHermana rdf:resource="http://ejemplo.org/familia#Veronica"/>
+        <tieneHermano rdf:resource="http://ejemplo.org/familia#Cristian"/>
+        <tieneHermano rdf:resource="http://ejemplo.org/familia#Vinicio"/>
+        <tieneHermanos rdf:resource="http://ejemplo.org/familia#Cristian"/>
+        <tieneHermanos rdf:resource="http://ejemplo.org/familia#Veronica"/>
+        <tieneHermanos rdf:resource="http://ejemplo.org/familia#Vinicio"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Cristina"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Sofia"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Jorge"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Maria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ejemplo.org/familia#Sofia -->
+
+    <owl:NamedIndividual rdf:about="http://ejemplo.org/familia#Sofia">
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hija"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hijos"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Mujer"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Sobrina"/>
+        <tieneHermana rdf:resource="http://ejemplo.org/familia#Cristina"/>
+        <tieneHermanos rdf:resource="http://ejemplo.org/familia#Cristina"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Charito"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Mauricio"/>
+        <tieneTia rdf:resource="http://ejemplo.org/familia#Veronica"/>
+        <tieneTio rdf:resource="http://ejemplo.org/familia#Cristian"/>
+        <tieneTio rdf:resource="http://ejemplo.org/familia#Vinicio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ejemplo.org/familia#Valentina -->
+
+    <owl:NamedIndividual rdf:about="http://ejemplo.org/familia#Valentina">
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hija"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hijos"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Mujer"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Sobrina"/>
+        <tieneHermana rdf:resource="http://ejemplo.org/familia#Erika"/>
+        <tieneHermanos rdf:resource="http://ejemplo.org/familia#Erika"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Alexandra"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Vinicio"/>
+        <tieneTia rdf:resource="http://ejemplo.org/familia#Veronica"/>
+        <tieneTio rdf:resource="http://ejemplo.org/familia#Cristian"/>
+        <tieneTio rdf:resource="http://ejemplo.org/familia#Mauricio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ejemplo.org/familia#Veronica -->
+
+    <owl:NamedIndividual rdf:about="http://ejemplo.org/familia#Veronica">
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hija"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hijos"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Madre"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Mujer"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Padres"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <tieneAcompañante rdf:resource="http://ejemplo.org/familia#Danilo"/>
+        <tieneGenero rdf:resource="http://ejemplo.org/familia#f"/>
+        <tieneHermano rdf:resource="http://ejemplo.org/familia#Cristian"/>
+        <tieneHermano rdf:resource="http://ejemplo.org/familia#Mauricio"/>
+        <tieneHermano rdf:resource="http://ejemplo.org/familia#Vinicio"/>
+        <tieneHermanos rdf:resource="http://ejemplo.org/familia#Cristian"/>
+        <tieneHermanos rdf:resource="http://ejemplo.org/familia#Mauricio"/>
+        <tieneHermanos rdf:resource="http://ejemplo.org/familia#Vinicio"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Estefany"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Jorge"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Maria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ejemplo.org/familia#Vinicio -->
+
+    <owl:NamedIndividual rdf:about="http://ejemplo.org/familia#Vinicio">
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Familiar"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hijo"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hijos"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Hombre"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Padre"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Padres"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Persona"/>
+        <tieneAcompañante rdf:resource="http://ejemplo.org/familia#Alexandra"/>
+        <tieneGenero rdf:resource="http://ejemplo.org/familia#m"/>
+        <tieneHermana rdf:resource="http://ejemplo.org/familia#Veronica"/>
+        <tieneHermano rdf:resource="http://ejemplo.org/familia#Cristian"/>
+        <tieneHermano rdf:resource="http://ejemplo.org/familia#Mauricio"/>
+        <tieneHermanos rdf:resource="http://ejemplo.org/familia#Cristian"/>
+        <tieneHermanos rdf:resource="http://ejemplo.org/familia#Mauricio"/>
+        <tieneHermanos rdf:resource="http://ejemplo.org/familia#Veronica"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Erika"/>
+        <tieneHijos rdf:resource="http://ejemplo.org/familia#Valentina"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Jorge"/>
+        <tienePadres rdf:resource="http://ejemplo.org/familia#Maria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ejemplo.org/familia#f -->
+
+    <owl:NamedIndividual rdf:about="http://ejemplo.org/familia#f">
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Femenino"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ejemplo.org/familia#m -->
+
+    <owl:NamedIndividual rdf:about="http://ejemplo.org/familia#m">
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Genero"/>
+        <rdf:type rdf:resource="http://ejemplo.org/familia#Masculino"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ejemplo.org/familia#Alexandra"/>
+            <rdf:Description rdf:about="http://ejemplo.org/familia#Charito"/>
+            <rdf:Description rdf:about="http://ejemplo.org/familia#Cristian"/>
+            <rdf:Description rdf:about="http://ejemplo.org/familia#Cristina"/>
+            <rdf:Description rdf:about="http://ejemplo.org/familia#Danilo"/>
+            <rdf:Description rdf:about="http://ejemplo.org/familia#Erika"/>
+            <rdf:Description rdf:about="http://ejemplo.org/familia#Estefany"/>
+            <rdf:Description rdf:about="http://ejemplo.org/familia#Jorge"/>
+            <rdf:Description rdf:about="http://ejemplo.org/familia#Maria"/>
+            <rdf:Description rdf:about="http://ejemplo.org/familia#Mauricio"/>
+            <rdf:Description rdf:about="http://ejemplo.org/familia#Sofia"/>
+            <rdf:Description rdf:about="http://ejemplo.org/familia#Valentina"/>
+            <rdf:Description rdf:about="http://ejemplo.org/familia#Veronica"/>
+            <rdf:Description rdf:about="http://ejemplo.org/familia#Vinicio"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/hijos">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/acompa">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/padres">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/tia">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/tio">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://ejemplo.org/familia#Persona"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://ejemplo.org/familia#Persona"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://ejemplo.org/familia#Persona"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://ejemplo.org/familia#tieneHijos"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h1"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://ejemplo.org/familia#tieneHijos"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h2"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h1"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h2"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://ejemplo.org/familia#tieneHermanos"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://ejemplo.org/familia#Persona"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://ejemplo.org/familia#tienePadres"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/padres"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://ejemplo.org/familia#tieneHermana"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/padres"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/tia"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://ejemplo.org/familia#tieneTia"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/tia"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S6</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://ejemplo.org/familia#Persona"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://ejemplo.org/familia#tienePadres"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/padres"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://ejemplo.org/familia#tieneHermano"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/padres"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/tio"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://ejemplo.org/familia#tieneTio"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/tio"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://ejemplo.org/familia#Persona"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://ejemplo.org/familia#tieneHermanos"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://ejemplo.org/familia#Hombre"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://ejemplo.org/familia#tieneHermano"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://ejemplo.org/familia#Persona"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://ejemplo.org/familia#tieneHermanos"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://ejemplo.org/familia#Mujer"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://ejemplo.org/familia#tieneHermana"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://ejemplo.org/familia#Persona"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://ejemplo.org/familia#tieneHijos"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/hijos"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://ejemplo.org/familia#Mujer"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://ejemplo.org/familia#tieneAcompañante"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/p"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/acompa"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://ejemplo.org/familia#tieneHijos"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/acompa"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-32/hijos"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

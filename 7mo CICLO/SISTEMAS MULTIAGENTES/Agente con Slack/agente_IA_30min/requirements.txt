@@ -1,0 +1,5 @@
+llama3-package
+langchain
+langchain_ollama
+python-dotenv
+slack_bolt

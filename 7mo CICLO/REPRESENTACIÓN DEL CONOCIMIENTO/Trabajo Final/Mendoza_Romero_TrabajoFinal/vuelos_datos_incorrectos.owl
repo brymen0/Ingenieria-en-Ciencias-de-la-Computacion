@@ -1,0 +1,1864 @@
+@prefix : <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/tienePeso
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/tienePeso> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#time
+xsd:time rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#autorizadoParaVuelo
+:autorizadoParaVuelo rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Piloto ;
+                     rdfs:range :Vuelo .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#avionAsignado
+:avionAsignado rdf:type owl:ObjectProperty ;
+               owl:inverseOf :cubrioVuelo ;
+               rdfs:domain :Vuelo ;
+               rdfs:range :Avion .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#claseAsiento
+:claseAsiento rdf:type owl:ObjectProperty ;
+              rdfs:domain :Boleto ;
+              rdfs:range :ClaseServicio .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#copilotoAsignado
+:copilotoAsignado rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Vuelo ;
+                  rdfs:range :Piloto .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#cubrioVuelo
+:cubrioVuelo rdf:type owl:ObjectProperty ;
+             rdfs:domain :Avion ;
+             rdfs:range :Vuelo .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#esEquipajeDe
+:esEquipajeDe rdf:type owl:ObjectProperty ;
+              rdfs:domain :Equipaje ;
+              rdfs:range :Persona .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#operaVuelo
+:operaVuelo rdf:type owl:ObjectProperty ;
+            rdfs:domain :Aerolinea ;
+            rdfs:range :Vuelo .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#perteneceAVuelo
+:perteneceAVuelo rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Boleto ;
+                 rdfs:range :Vuelo .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#pilotoAsignado
+:pilotoAsignado rdf:type owl:ObjectProperty ;
+                rdfs:domain :Vuelo ;
+                rdfs:range :Piloto .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#puedeManejar
+:puedeManejar rdf:type owl:ObjectProperty ;
+              rdfs:domain :Habilitacion ;
+              rdfs:range :Avion .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#requiereHabilitacion
+:requiereHabilitacion rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Avion ;
+                      rdfs:range :Habilitacion .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneAvion
+:tieneAvion rdf:type owl:ObjectProperty ;
+            rdfs:domain :Aerolinea ;
+            rdfs:range :Avion .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneBoleto
+:tieneBoleto rdf:type owl:ObjectProperty ;
+             rdfs:domain :Pasajero ;
+             rdfs:range :Boleto .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneClase
+:tieneClase rdf:type owl:ObjectProperty ;
+            rdfs:domain :Avion ;
+            rdfs:range :ClaseServicio .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneDestino
+:tieneDestino rdf:type owl:ObjectProperty ;
+              rdfs:domain :Vuelo ;
+              rdfs:range :Ciudad .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneEquipaje
+:tieneEquipaje rdf:type owl:ObjectProperty ;
+               rdfs:domain :Boleto ;
+               rdfs:range :Equipaje .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneHabilitacion
+:tieneHabilitacion rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Piloto ;
+                   rdfs:range :Habilitacion .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneOrigen
+:tieneOrigen rdf:type owl:ObjectProperty ;
+             rdfs:domain :Vuelo ;
+             rdfs:range :Ciudad .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tienePasajero
+:tienePasajero rdf:type owl:ObjectProperty ;
+               rdfs:domain :Vuelo ;
+               rdfs:range :Pasajero .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tienePiloto
+:tienePiloto rdf:type owl:ObjectProperty ;
+             owl:inverseOf :trabajaPara ;
+             rdfs:domain :Aerolinea ;
+             rdfs:range :Piloto .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#trabajaPara
+:trabajaPara rdf:type owl:ObjectProperty ;
+             rdfs:domain :Piloto ;
+             rdfs:range :Aerolinea .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#fecha
+:fecha rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Vuelo ;
+       rdfs:range xsd:date .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#horaLlegada
+:horaLlegada rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Vuelo ;
+             rdfs:range xsd:time .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#horaSalida
+:horaSalida rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Vuelo ;
+            rdfs:range xsd:time .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#llevaMascota
+:llevaMascota rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Boleto ;
+              rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#precioBase
+:precioBase rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Vuelo ;
+            rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#precioTotal
+:precioTotal rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Boleto ;
+             rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneCapacidad
+:tieneCapacidad rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Avion ;
+                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneEdad
+:tieneEdad rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Persona ;
+           rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneNombre
+:tieneNombre rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Persona ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tienePeso
+:tienePeso rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Equipaje ;
+           rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Adulto
+:Adulto rdf:type owl:Class ;
+        rdfs:subClassOf :Persona .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Aerolinea
+:Aerolinea rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Airbus_A318
+:Airbus_A318 rdf:type owl:Class ;
+             rdfs:subClassOf :Avion .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Airbus_A319
+:Airbus_A319 rdf:type owl:Class ;
+             rdfs:subClassOf :Avion .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Anciano
+:Anciano rdf:type owl:Class ;
+         rdfs:subClassOf :Persona .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Avion
+:Avion rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#AvionAltaCapacidad
+:AvionAltaCapacidad rdf:type owl:Class ;
+                    rdfs:subClassOf :Avion .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boeing_737
+:Boeing_737 rdf:type owl:Class ;
+            rdfs:subClassOf :Avion .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boeing_777
+:Boeing_777 rdf:type owl:Class ;
+            rdfs:subClassOf :Avion .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boleto
+:Boleto rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#BoletoConMascota
+:BoletoConMascota rdf:type owl:Class ;
+                  rdfs:subClassOf :Boleto .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#BoletoConTarifaNiño
+:BoletoConTarifaNiño rdf:type owl:Class ;
+                     rdfs:subClassOf :Boleto .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#BoletoCostoExtra
+:BoletoCostoExtra rdf:type owl:Class ;
+                  rdfs:subClassOf :Boleto .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#CargoExtraEquipaje
+:CargoExtraEquipaje rdf:type owl:Class ;
+                    rdfs:subClassOf :Equipaje .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Ciudad
+:Ciudad rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#ClaseServicio
+:ClaseServicio rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#CopilotoAutorizado
+:CopilotoAutorizado rdf:type owl:Class ;
+                    rdfs:subClassOf :Piloto .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Equipaje
+:Equipaje rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#EquipajePesado
+:EquipajePesado rdf:type owl:Class ;
+                rdfs:subClassOf :Equipaje .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#EquipajeSobrepeso
+:EquipajeSobrepeso rdf:type owl:Class ;
+                   rdfs:subClassOf :Equipaje .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Habilitacion
+:Habilitacion rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Niño
+:Niño rdf:type owl:Class ;
+      rdfs:subClassOf :Persona .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Pasajero
+:Pasajero rdf:type owl:Class ;
+          rdfs:subClassOf :Persona .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Persona
+:Persona rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Piloto
+:Piloto rdf:type owl:Class ;
+        rdfs:subClassOf :Persona .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#PilotoAutorizado
+:PilotoAutorizado rdf:type owl:Class ;
+                  rdfs:subClassOf :Piloto .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#PilotoNoAutorizado
+:PilotoNoAutorizado rdf:type owl:Class ;
+                    rdfs:subClassOf :Piloto .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#PilotoSenior
+:PilotoSenior rdf:type owl:Class ;
+              rdfs:subClassOf :Piloto .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#RequiereCheckInEspecial
+:RequiereCheckInEspecial rdf:type owl:Class ;
+                         rdfs:subClassOf :Pasajero .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Vuelo
+:Vuelo rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#VueloConRiesgo
+:VueloConRiesgo rdf:type owl:Class ;
+                rdfs:subClassOf :Vuelo .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#VueloInternacional
+:VueloInternacional rdf:type owl:Class ;
+                    rdfs:subClassOf :Vuelo .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#A318_1
+:A318_1 rdf:type owl:NamedIndividual ;
+        :tieneClase :Ejecutiva ,
+                    :Turista ;
+        :tieneCapacidad 250 .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#A318_2
+:A318_2 rdf:type owl:NamedIndividual ;
+        :requiereHabilitacion :A320TypeRating ;
+        :tieneClase :Ejecutiva ,
+                    :Turista ;
+        :tieneCapacidad 250 .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#A318_3
+:A318_3 rdf:type owl:NamedIndividual ;
+        :requiereHabilitacion :A320TypeRating ;
+        :tieneClase :Ejecutiva ,
+                    :Turista ;
+        :tieneCapacidad 250 .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#A319_1
+:A319_1 rdf:type owl:NamedIndividual ;
+        :requiereHabilitacion :A320TypeRating ;
+        :tieneClase :Ejecutiva ,
+                    :Turista ;
+        :tieneCapacidad 150 .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#A319_2
+:A319_2 rdf:type owl:NamedIndividual ;
+        :requiereHabilitacion :A320TypeRating ;
+        :tieneClase :Ejecutiva ,
+                    :Turista ;
+        :tieneCapacidad 150 .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#A319_3
+:A319_3 rdf:type owl:NamedIndividual ;
+        :requiereHabilitacion :A320TypeRating ;
+        :tieneClase :Ejecutiva ,
+                    :Turista ;
+        :tieneCapacidad 150 .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#A320TypeRating
+:A320TypeRating rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Avianca
+:Avianca rdf:type owl:NamedIndividual ;
+         :tieneAvion :A319_1 ,
+                     <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#737_1> ,
+                     <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#777_2> ;
+         :tienePiloto :Piloto_AnaMartinez ,
+                      :Piloto_CarlosLopez .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#B737TypeRating
+:B737TypeRating rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#B777TypeRating
+:B777TypeRating rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Bogota
+:Bogota rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boleto_Camila
+:Boleto_Camila rdf:type owl:NamedIndividual ;
+               :claseAsiento :Ejecutiva ,
+                             :Turista ;
+               :perteneceAVuelo :Vuelo_Bogota_Panama_02 ;
+               :tieneEquipaje :Equipaje_Camila .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boleto_Jose
+:Boleto_Jose rdf:type owl:NamedIndividual ;
+             :claseAsiento :Ejecutiva ;
+             :perteneceAVuelo :Vuelo_Bogota_Panama_02 ,
+                              :Vuelo_Cuenca_Lima_03 .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boleto_Rosa
+:Boleto_Rosa rdf:type owl:NamedIndividual ;
+             :claseAsiento :Turista ;
+             :perteneceAVuelo :Vuelo_Cuenca_Lima_03 ;
+             :llevaMascota "false"^^xsd:boolean ,
+                           "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#CopaAirlines
+:CopaAirlines rdf:type owl:NamedIndividual ;
+              :tieneAvion :A319_3 ;
+              :tienePiloto :Piloto_MarcosNaranjo ,
+                           :Piloto_MariaGonzalez .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Cuenca
+:Cuenca rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Ejecutiva
+:Ejecutiva rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Equipaje_Camila
+:Equipaje_Camila rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Equipaje_Jose
+:Equipaje_Jose rdf:type owl:NamedIndividual ;
+               :tienePeso 22 .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Latam
+:Latam rdf:type owl:NamedIndividual ;
+       :tieneAvion :A318_2 ,
+                   :A319_2 ,
+                   <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#737_2> ;
+       :tienePiloto :Piloto_JuanPerez .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Lima
+:Lima rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Panama
+:Panama rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Pasajero_Camila
+:Pasajero_Camila rdf:type owl:NamedIndividual ;
+                 :tieneBoleto :Boleto_Camila ;
+                 :tieneNombre "Camila Ortega" .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Pasajero_Jose
+:Pasajero_Jose rdf:type owl:NamedIndividual ;
+               :tieneBoleto :Boleto_Jose ;
+               :tieneEdad 10 ;
+               :tieneNombre "Jose Moyano" .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Pasajero_Rosa
+:Pasajero_Rosa rdf:type owl:NamedIndividual ;
+               :tieneEdad 70 ;
+               :tieneNombre "Rosa Ramirez" .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Piloto_AnaMartinez
+:Piloto_AnaMartinez rdf:type owl:NamedIndividual ;
+                    :tieneHabilitacion :A320TypeRating ,
+                                       :B737TypeRating ;
+                    :tieneEdad 55 ;
+                    :tieneNombre "Ana Martínez" .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Piloto_CarlosLopez
+:Piloto_CarlosLopez rdf:type owl:NamedIndividual ;
+                    :tieneEdad 38 .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Piloto_CristianEstrada
+:Piloto_CristianEstrada rdf:type owl:NamedIndividual ;
+                        :tieneHabilitacion :B777TypeRating ;
+                        :tieneEdad 37 ;
+                        :tieneNombre "Cristian Estrada" .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Piloto_JuanPerez
+:Piloto_JuanPerez rdf:type owl:NamedIndividual ;
+                  :tieneHabilitacion :A320TypeRating ;
+                  :tieneEdad 45 ;
+                  :tieneNombre "Juan Pérez" .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Piloto_MarcosNaranjo
+:Piloto_MarcosNaranjo rdf:type owl:NamedIndividual ;
+                      :tieneHabilitacion :A320TypeRating ,
+                                         :B737TypeRating ,
+                                         :B777TypeRating ;
+                      :tieneEdad 52 ;
+                      :tieneNombre "Marcos Naranjo" .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Piloto_MariaGonzalez
+:Piloto_MariaGonzalez rdf:type owl:NamedIndividual ;
+                      :tieneHabilitacion :A320TypeRating ;
+                      :tieneEdad 40 ;
+                      :tieneNombre "María González" .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Quito
+:Quito rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Turista
+:Turista rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Vuelo_Bogota_Panama_02
+:Vuelo_Bogota_Panama_02 rdf:type owl:NamedIndividual ;
+                        :avionAsignado <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#737_1> ;
+                        :pilotoAsignado :Piloto_AnaMartinez ,
+                                        :Piloto_CarlosLopez ;
+                        :tieneDestino :Panama ;
+                        :tieneOrigen :Bogota ;
+                        :horaLlegada "22:30:00"^^xsd:time ;
+                        :horaSalida "20:30:00"^^xsd:time ;
+                        :precioBase "650.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Vuelo_Cuenca_Lima_03
+:Vuelo_Cuenca_Lima_03 rdf:type owl:NamedIndividual ;
+                      :avionAsignado :A318_2 ;
+                      :copilotoAsignado :Piloto_JuanPerez ;
+                      :pilotoAsignado :Piloto_CristianEstrada ;
+                      :fecha "2025-07-26"^^xsd:date ,
+                             "2025-07-28"^^xsd:date ;
+                      :horaLlegada "13:00:00"^^xsd:time ;
+                      :precioBase "800.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Vuelo_Quito_Cuenca_01
+:Vuelo_Quito_Cuenca_01 rdf:type owl:NamedIndividual ;
+                       :avionAsignado :A319_3 ;
+                       :copilotoAsignado :Piloto_MariaGonzalez ;
+                       :pilotoAsignado :Piloto_MarcosNaranjo ;
+                       :tieneDestino :Cuenca ,
+                                     :Lima ;
+                       :fecha "2025-07-27"^^xsd:date ;
+                       :horaSalida "13:00:00"^^xsd:time .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#737_1
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#737_1> rdf:type owl:NamedIndividual ;
+                                                                                :requiereHabilitacion :B737TypeRating ;
+                                                                                :tieneCapacidad 200 .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#737_2
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#737_2> rdf:type owl:NamedIndividual ;
+                                                                                :requiereHabilitacion :B737TypeRating ;
+                                                                                :tieneClase :Turista ;
+                                                                                :tieneCapacidad 1 .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#777_1
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#777_1> rdf:type owl:NamedIndividual ;
+                                                                                :requiereHabilitacion :B777TypeRating ;
+                                                                                :tieneClase :Ejecutiva ,
+                                                                                            :Turista ;
+                                                                                :tieneCapacidad 180 .
+
+
+###  http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#777_2
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#777_2> rdf:type owl:NamedIndividual ;
+                                                                                :requiereHabilitacion :B777TypeRating ;
+                                                                                :tieneClase :Ejecutiva ,
+                                                                                            :Turista ;
+                                                                                :tieneCapacidad 180 .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :A320TypeRating
+                        :B737TypeRating
+                        :B777TypeRating
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Bogota
+                        :Cuenca
+                        :Lima
+                        :Panama
+                        :Quito
+                      )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/av> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:a rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:h rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:h1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/cap> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:b rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:v rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:base rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:inc1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:inc2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:totalInc rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:precioFinal rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:desc rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:incremento rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:p rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/b> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/base> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/incremento> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/precioFinal> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/peso> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/lm> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/h1> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/h2> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/edad> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/h> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/hReq> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/hPil> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/o> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/d> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AerolineaMenjaVuelo" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Aerolinea ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/a>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneAvion ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/a> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/av>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Vuelo ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :avionAsignado ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/av>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :operaVuelo ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/a> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "BoletoNiño" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Niño ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Boleto ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneBoleto ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :BoletoConTarifaNiño ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "PrecioTotalMascota" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boleto ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/b>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :BoletoConMascota ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/b>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :perteneceAVuelo ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/b> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :precioBase ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/base>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#multiply> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/incremento> ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/base> ;
+                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first 0.2 ;
+                                                                                                                                                                      rdf:rest rdf:nil
+                                                                                                                                                                    ]
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#arguments> ( <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/precioFinal>
+                                                                                                                                                           <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/base>
+                                                                                                                                                           <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/incremento>
+                                                                                                                                                         )
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :precioTotal ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/b> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/precioFinal>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "CostoExtraEquipajePesado" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boleto ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/b>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneEquipaje ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/b> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :tienePeso ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/peso>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/peso> ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 23 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :BoletoCostoExtra ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/b>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "BoletoConMascota" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boleto ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/b>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :llevaMascota ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/b> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/lm>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/lm> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first "true"^^xsd:boolean ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :BoletoConMascota ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/b>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "EsEquipajeDe" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Persona ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneBoleto ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/b>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Equipaje ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneEquipaje ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/b> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :esEquipajeDe ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "EquipajeConSobrepeso" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Equipaje ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :tienePeso ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/peso>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/peso> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 23 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :EquipajeSobrepeso ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :CargoExtraEquipaje ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "tienePasajero" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Pasajero ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneBoleto ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :perteneceAVuelo ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :v
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :Vuelo ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :tienePasajero ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "EspecialCheckIn" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Pasajero ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneBoleto ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/b>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneEquipaje ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/b> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :tienePeso ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/peso>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/peso> ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first 30 ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :RequiereCheckInEspecial ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :EquipajePesado ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "PuedeManejar" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Avion ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :a
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Habilitacion ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :h
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :requiereHabilitacion ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :a ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :h1
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#SameIndividualAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :h ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :h1
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :puedeManejar ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :h ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :a
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "EsAdulto" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Persona ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneEdad ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 12 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e> ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 65 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Adulto ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "esAnciano" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Persona ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneEdad ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 65 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Anciano ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "EsNiño" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Persona ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneEdad ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/e> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 12 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Niño ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "PilotoSenior" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Piloto ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneHabilitacion ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/h1>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneHabilitacion ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/h2>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/h1> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/h2>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneEdad ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/edad>
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/edad> ;
+                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first 50 ;
+                                                                                                                                                                      rdf:rest rdf:nil
+                                                                                                                                                                    ]
+                                                                                                                                                         ]
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :PilotoSenior ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "CopilotoAutorizado" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Vuelo ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :copilotoAsignado ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/c>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :avionAsignado ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/a>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :requiereHabilitacion ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/a> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/h>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneHabilitacion ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/c> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/h>
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CopilotoAutorizado ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :autorizadoParaVuelo ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/c> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "PilotoAutorizado" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Vuelo ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :pilotoAsignado ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :avionAsignado ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/a>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :requiereHabilitacion ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/a> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/h>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneHabilitacion ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/h>
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :PilotoAutorizado ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :autorizadoParaVuelo ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "VueloNoAautorizado" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Vuelo ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :pilotoAsignado ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :avionAsignado ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/a>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :requiereHabilitacion ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/a> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/hReq>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneHabilitacion ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/hPil>
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/hReq> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/hPil>
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :PilotoNoAutorizado ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :VueloConRiesgo ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "VueloInternacional" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Vuelo ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneOrigen ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/o>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneDestino ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/d>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/o> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/d>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :VueloInternacional ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/v>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AvionAltaCapacidad" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Avion ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/a>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :tieneCapacidad ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/a> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/cap>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/cap> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 200 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AvionAltaCapacidad ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/a>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "PrecioTotalCostoExtraYMascota" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boleto ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :BoletoConMascota ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :BoletoCostoExtra ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :perteneceAVuelo ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :v
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :precioBase ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :base
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#multiply> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first :inc1 ;
+                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first :base ;
+                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first 0.2 ;
+                                                                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                                                                               ]
+                                                                                                                                                                    ]
+                                                                                                                                                         ]
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#multiply> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first :inc2 ;
+                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first :base ;
+                                                                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                            rdf:first 0.15 ;
+                                                                                                                                                                                            rdf:rest rdf:nil
+                                                                                                                                                                                          ]
+                                                                                                                                                                               ]
+                                                                                                                                                                    ]
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#arguments> ( :totalInc
+                                                                                                                                                                                 :inc1
+                                                                                                                                                                                 :inc2
+                                                                                                                                                                               )
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#arguments> ( :precioFinal
+                                                                                                                                                                                            :base
+                                                                                                                                                                                            :totalInc
+                                                                                                                                                                                          )
+                                                                                                                                             ] ;
+                                                                                                                                   rdf:rest rdf:nil
+                                                                                                                                 ]
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :precioTotal ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :precioFinal
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "PrecioTotalNiño" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boleto ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :BoletoConTarifaNiño ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :perteneceAVuelo ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :v
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :precioBase ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :base
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#multiply> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first :desc ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first :base ;
+                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first 0.3 ;
+                                                                                                                                                                      rdf:rest rdf:nil
+                                                                                                                                                                    ]
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#subtract> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#arguments> ( :precioFinal
+                                                                                                                                                           :base
+                                                                                                                                                           :desc
+                                                                                                                                                         )
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :precioTotal ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :precioFinal
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "PrecioBoletoCostoExtra" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boleto ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :BoletoCostoExtra ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :perteneceAVuelo ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :v
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :precioBase ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :base
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#multiply> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first :incremento ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first :base ;
+                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first 0.15 ;
+                                                                                                                                                                      rdf:rest rdf:nil
+                                                                                                                                                                    ]
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#arguments> ( :precioFinal
+                                                                                                                                                           :base
+                                                                                                                                                           :incremento
+                                                                                                                                                         )
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :precioTotal ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :precioFinal
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

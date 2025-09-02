@@ -1,0 +1,507 @@
+@prefix : <http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/> .
+
+<http://www.pizza.com/ontologias/pizza.owl> rdf:type owl:Ontology ;
+                                             rdfs:comment "Bryan Mendoza" ,
+                                                          "Esta es una ontología sobre pizzas que describe varios tipos de pizza basadas en su cubierta" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/esBaseDe
+:esBaseDe rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :esIngredienteDe ;
+          owl:inverseOf :tieneBase .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/esCubiertaDe
+:esCubiertaDe rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :esIngredienteDe ;
+              owl:inverseOf :tieneCubierta .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/esIngredienteDe
+:esIngredienteDe rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :tieneIngrediente .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/tieneBase
+:tieneBase rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :tieneIngrediente ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :Pizza ;
+           rdfs:range :PizzaBase .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/tieneCubierta
+:tieneCubierta rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :tieneIngrediente ;
+               rdfs:domain :Pizza ;
+               rdfs:range :PizzaCubierta .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/tieneIngrediente
+:tieneIngrediente rdf:type owl:ObjectProperty ,
+                           owl:TransitiveProperty ;
+                  rdfs:domain owl:Thing ;
+                  rdfs:range owl:Thing .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/tienePaisDeOrigen
+:tienePaisDeOrigen rdf:type owl:ObjectProperty ;
+                   rdfs:range :Pais .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/tienePicante
+:tienePicante rdf:type owl:ObjectProperty ;
+              rdfs:range :Picante .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty owl:inverseOf owl:topObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/tieneAncho
+:tieneAncho rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :tienePropiedadBase ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/tieneContenidoCalorico
+:tieneContenidoCalorico rdf:type owl:DatatypeProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain :Pizza ;
+                        rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/tieneEspesor
+:tieneEspesor rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :tienePropiedadBase ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/tienePropiedadBase
+:tienePropiedadBase rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :PizzaBase .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.pizza.com/ontologias/pizza.owl#PizzaInteresante
+:PizzaInteresante rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :Pizza
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :tieneCubierta ;
+                                                               owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                                                               owl:onClass :PizzaCubierta
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] .
+
+
+###  http://www.pizza.com/ontologias/pizza.owl#PizzaNoVegetariana
+:PizzaNoVegetariana rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( :Pizza
+                                                               [ rdf:type owl:Class ;
+                                                                 owl:complementOf :PizzaVegetariana
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    owl:disjointWith :PizzaVegetariana .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/Americana
+:Americana rdf:type owl:Class ;
+           rdfs:subClassOf :PizzaConNombre ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :tieneCubierta ;
+                             owl:someValuesFrom :CubiertaMozarela
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :tieneCubierta ;
+                             owl:someValuesFrom :CubiertaPeperoni
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :tieneCubierta ;
+                             owl:someValuesFrom :CubiertaTomate
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :tieneCubierta ;
+                             owl:allValuesFrom [ rdf:type owl:Class ;
+                                                 owl:unionOf ( :CubiertaMozarela
+                                                               :CubiertaPeperoni
+                                                               :CubiertaTomate
+                                                             )
+                                               ]
+                           ] .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/AmericanaCaliente
+:AmericanaCaliente rdf:type owl:Class ;
+                   rdfs:subClassOf :PizzaConNombre ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :tieneCubierta ;
+                                     owl:someValuesFrom :CubiertaCarnePicante
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :tieneCubierta ;
+                                     owl:someValuesFrom :CubiertaMozarela
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :tieneCubierta ;
+                                     owl:someValuesFrom :CubiertaPeperoni
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :tieneCubierta ;
+                                     owl:someValuesFrom :CubiertaTomate
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :tieneCubierta ;
+                                     owl:allValuesFrom [ rdf:type owl:Class ;
+                                                         owl:unionOf ( :CubiertaCarnePicante
+                                                                       :CubiertaMozarela
+                                                                       :CubiertaPeperoni
+                                                                       :CubiertaTomate
+                                                                     )
+                                                       ]
+                                   ] .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/BaseDePanProfunda
+:BaseDePanProfunda rdf:type owl:Class ;
+                   rdfs:subClassOf :PizzaBase .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/BaseDelgadaYCrujiente
+:BaseDelgadaYCrujiente rdf:type owl:Class ;
+                       rdfs:subClassOf :PizzaBase .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/Caliente
+:Caliente rdf:type owl:Class ;
+          rdfs:subClassOf :Picante .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaAceituna
+:CubiertaAceituna rdf:type owl:Class ;
+                  rdfs:subClassOf :CubiertaVegetales .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaAnchoa
+:CubiertaAnchoa rdf:type owl:Class ;
+                rdfs:subClassOf :CubiertaComidaMar .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaAtun
+:CubiertaAtun rdf:type owl:Class ;
+              rdfs:subClassOf :CubiertaComidaMar .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaCarne
+:CubiertaCarne rdf:type owl:Class ;
+               rdfs:subClassOf :PizzaCubierta .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaCarnePicante
+:CubiertaCarnePicante rdf:type owl:Class ;
+                      rdfs:subClassOf :CubiertaCarne .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaCebolla
+:CubiertaCebolla rdf:type owl:Class ;
+                 rdfs:subClassOf :CubiertaVegetales .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaComidaMar
+:CubiertaComidaMar rdf:type owl:Class ;
+                   rdfs:subClassOf :PizzaCubierta .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaJamon
+:CubiertaJamon rdf:type owl:Class ;
+               rdfs:subClassOf :CubiertaCarne .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaMozarela
+:CubiertaMozarela rdf:type owl:Class ;
+                  rdfs:subClassOf :CubiertaQueso ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :tienePaisDeOrigen ;
+                                    owl:hasValue :Italia
+                                  ] .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaParmesano
+:CubiertaParmesano rdf:type owl:Class ;
+                   rdfs:subClassOf :CubiertaQueso .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaPeperoni
+:CubiertaPeperoni rdf:type owl:Class ;
+                  rdfs:subClassOf :CubiertaCarne .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaPimiento
+:CubiertaPimiento rdf:type owl:Class ;
+                  rdfs:subClassOf :CubiertaVegetales .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaQueso
+:CubiertaQueso rdf:type owl:Class ;
+               rdfs:subClassOf :PizzaCubierta .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaSalami
+:CubiertaSalami rdf:type owl:Class ;
+                rdfs:subClassOf :CubiertaCarne .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaTomate
+:CubiertaTomate rdf:type owl:Class ;
+                rdfs:subClassOf :CubiertaVegetales .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaVegetales
+:CubiertaVegetales rdf:type owl:Class ;
+                   rdfs:subClassOf :PizzaCubierta .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/Margarita
+:Margarita rdf:type owl:Class ;
+           rdfs:subClassOf :PizzaConNombre ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :tieneCubierta ;
+                             owl:someValuesFrom :CubiertaMozarela
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :tieneCubierta ;
+                             owl:someValuesFrom :CubiertaTomate
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :tieneCubierta ;
+                             owl:allValuesFrom [ rdf:type owl:Class ;
+                                                 owl:unionOf ( :CubiertaMozarela
+                                                               :CubiertaTomate
+                                                             )
+                                               ]
+                           ] .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/Mediano
+:Mediano rdf:type owl:Class ;
+         rdfs:subClassOf :Picante .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/Pais
+:Pais rdf:type owl:Class ;
+      owl:equivalentClass [ rdf:type owl:Class ;
+                            owl:oneOf ( :Alemania
+                                        :EEUU
+                                        :Francia
+                                        :Inglaterra
+                                        :Italia
+                                      )
+                          ] .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/Picante
+:Picante rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Class ;
+                               owl:unionOf ( :Caliente
+                                             :Mediano
+                                             :Suave
+                                           )
+                             ] .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/Pizza
+:Pizza rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :tieneCubierta ;
+                         owl:someValuesFrom :PizzaCubierta
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :tieneBase ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :PizzaBase
+                       ] .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/PizzaBase
+:PizzaBase rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/PizzaConNombre
+:PizzaConNombre rdf:type owl:Class ;
+                rdfs:subClassOf :Pizza .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/PizzaConQueso
+:PizzaConQueso rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( :Pizza
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :tieneCubierta ;
+                                                            owl:someValuesFrom :CubiertaQueso
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/PizzaCubierta
+:PizzaCubierta rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/PizzaVegetariana
+:PizzaVegetariana rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :Pizza
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :tieneCubierta ;
+                                                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                   owl:unionOf ( :CubiertaQueso
+                                                                                                 :CubiertaVegetales
+                                                                                               )
+                                                                                 ]
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/Soho
+:Soho rdf:type owl:Class ;
+      rdfs:subClassOf :PizzaConNombre ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :tieneCubierta ;
+                        owl:someValuesFrom :CubiertaAceituna
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :tieneCubierta ;
+                        owl:someValuesFrom :CubiertaMozarela
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :tieneCubierta ;
+                        owl:someValuesFrom :CubiertaParmesano
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :tieneCubierta ;
+                        owl:someValuesFrom :CubiertaTomate
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :tieneCubierta ;
+                        owl:allValuesFrom [ rdf:type owl:Class ;
+                                            owl:unionOf ( :CubiertaAceituna
+                                                          :CubiertaMozarela
+                                                          :CubiertaParmesano
+                                                          :CubiertaTomate
+                                                        )
+                                          ]
+                      ] .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/Suave
+:Suave rdf:type owl:Class ;
+       rdfs:subClassOf :Picante .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/Alemania
+:Alemania rdf:type owl:NamedIndividual ,
+                   :Pais .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/CubiertaMozarela_1
+:CubiertaMozarela_1 rdf:type owl:NamedIndividual ,
+                             :CubiertaMozarela .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/EEUU
+:EEUU rdf:type owl:NamedIndividual ,
+               :Pais .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/EjemploMargarita
+:EjemploMargarita rdf:type owl:NamedIndividual ,
+                           :Pizza ;
+                  :tieneContenidoCalorico 263 .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/EjemploPizzaVariosIngredientes
+:EjemploPizzaVariosIngredientes rdf:type owl:NamedIndividual ,
+                                         :Pizza ;
+                                :tieneContenidoCalorico 723 .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/Francia
+:Francia rdf:type owl:NamedIndividual ,
+                  :Pais .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/Inglaterra
+:Inglaterra rdf:type owl:NamedIndividual ,
+                     :Pais .
+
+
+###  http://www.semanticweb.org/estudiantes/ontologies/2025/4/untitled-ontology-8/Italia
+:Italia rdf:type owl:NamedIndividual ,
+                 :Pais .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Americana
+                :AmericanaCaliente
+                :Margarita
+                :Soho
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Caliente
+                :Mediano
+                :Suave
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CubiertaCarne
+                :CubiertaComidaMar
+                :CubiertaQueso
+                :CubiertaVegetales
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Pizza
+                :PizzaBase
+                :PizzaCubierta
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

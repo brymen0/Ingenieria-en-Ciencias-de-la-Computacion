@@ -1,0 +1,5 @@
+1. Explique los métodos de control de acceso
+2. Explique que es el desarrollo web seguro
+3. Que es el desbordamiento de pila
+4. Enumere y describa los tipos de firewall
+5. Que es IDS, sus tipos y su complemento con IPS

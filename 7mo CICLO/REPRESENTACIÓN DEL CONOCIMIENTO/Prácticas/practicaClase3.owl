@@ -1,0 +1,969 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/"
+     xml:base="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:untitled-ontology-16="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#conduce -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#conduce">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Vehiculo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#conoceA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#conoceA">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tieneApellido -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tieneApellido">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tieneEdad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tieneEdad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tieneGenero -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tieneGenero">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tieneNombre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tieneNombre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tienePermisoConduccionNormal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tienePermisoConduccionNormal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tienePermisoConduccionProfesional -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tienePermisoConduccionProfesional">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tienePesoKilos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tienePesoKilos">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Vehiculo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tienePesoLibras -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tienePesoLibras">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Vehiculo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Adulto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Adulto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Auto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Auto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Camion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Camion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Conductor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Conductor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Adulto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#ConductorAuto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#ConductorAuto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Conductor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#ConductorAutoSinPermiso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#ConductorAutoSinPermiso">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Conductor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#ConductorCamion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#ConductorCamion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Conductor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#MenorEdad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#MenorEdad">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Vehiculo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Vehiculo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#ChevroletSpark -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#ChevroletSpark">
+        <rdf:type rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Vehiculo"/>
+        <untitled-ontology-16:tienePesoKilos rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1230.0</untitled-ontology-16:tienePesoKilos>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#HinoFC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#HinoFC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Vehiculo"/>
+        <untitled-ontology-16:tienePesoKilos rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9500.0</untitled-ontology-16:tienePesoKilos>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+        <untitled-ontology-16:conduce rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#ChevroletSpark"/>
+        <untitled-ontology-16:tieneApellido>Espinoza</untitled-ontology-16:tieneApellido>
+        <untitled-ontology-16:tieneEdad rdf:datatype="http://www.w3.org/2001/XMLSchema#int">46</untitled-ontology-16:tieneEdad>
+        <untitled-ontology-16:tieneGenero>Masculino</untitled-ontology-16:tieneGenero>
+        <untitled-ontology-16:tieneNombre>Mauricio</untitled-ontology-16:tieneNombre>
+        <untitled-ontology-16:tienePermisoConduccionNormal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-16:tienePermisoConduccionNormal>
+        <untitled-ontology-16:tienePermisoConduccionProfesional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-16:tienePermisoConduccionProfesional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+        <untitled-ontology-16:conoceA rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona1"/>
+        <untitled-ontology-16:conoceA rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona3"/>
+        <untitled-ontology-16:tieneApellido>Pérez</untitled-ontology-16:tieneApellido>
+        <untitled-ontology-16:tieneEdad rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</untitled-ontology-16:tieneEdad>
+        <untitled-ontology-16:tieneGenero>Femenino</untitled-ontology-16:tieneGenero>
+        <untitled-ontology-16:tieneNombre>Ana</untitled-ontology-16:tieneNombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+        <untitled-ontology-16:conduce rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#ChevroletSpark"/>
+        <untitled-ontology-16:conoceA rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona4"/>
+        <untitled-ontology-16:tieneApellido>Garcés</untitled-ontology-16:tieneApellido>
+        <untitled-ontology-16:tieneEdad rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</untitled-ontology-16:tieneEdad>
+        <untitled-ontology-16:tieneNombre>Rosa</untitled-ontology-16:tieneNombre>
+        <untitled-ontology-16:tienePermisoConduccionNormal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-16:tienePermisoConduccionNormal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+        <untitled-ontology-16:conduce rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#HinoFC"/>
+        <untitled-ontology-16:tieneEdad rdf:datatype="http://www.w3.org/2001/XMLSchema#int">37</untitled-ontology-16:tieneEdad>
+        <untitled-ontology-16:tieneNombre>Luis</untitled-ontology-16:tieneNombre>
+        <untitled-ontology-16:tienePermisoConduccionProfesional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-16:tienePermisoConduccionProfesional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/edad">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/peso">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/pesoKg">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/pesoLb">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S8</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#conduce"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Auto"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tienePermisoConduccionNormal"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tienePermisoConduccionProfesional"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#ConductorAutoSinPermiso"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S7</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#conduce"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Auto"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tienePermisoConduccionNormal"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#ConductorAuto"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S6</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#conduce"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Camion"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tienePermisoConduccionProfesional"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#ConductorCamion"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#conduce"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Conductor"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tieneEdad"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/edad"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/edad"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Adulto"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Persona"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tieneEdad"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/edad"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/edad"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#MenorEdad"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Vehiculo"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tienePesoKilos"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/peso"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/peso"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4000</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Camion"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Vehiculo"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tienePesoKilos"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/peso"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/peso"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4000</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Auto"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S9</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#Vehiculo"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tienePesoKilos"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/pesoKg"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/pesoLb"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/pesoKg"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.2</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16#tienePesoLibras"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/v"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/estudiantes/ontologies/2025/6/untitled-ontology-16/pesoLb"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

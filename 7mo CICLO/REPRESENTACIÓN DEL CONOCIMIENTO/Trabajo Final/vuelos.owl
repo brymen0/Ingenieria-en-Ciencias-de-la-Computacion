@@ -1,0 +1,455 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/"
+     xml:base="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#time -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#time"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#avionAsignado -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#avionAsignado">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Vuelo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Avion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#claseAsiento -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#claseAsiento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boleto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#ClaseServicio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#copilotoAsignado -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#copilotoAsignado">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Vuelo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Piloto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#perteneceAVuelo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#perteneceAVuelo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boleto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Vuelo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#pilotoAsignado -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#pilotoAsignado">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Vuelo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Piloto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#requiereHabilitacion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#requiereHabilitacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Avion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Habilitacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneAvion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneAvion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Aerolinea"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Avion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneBoleto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneBoleto">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Pasajero"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boleto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneClase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneClase">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Avion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#ClaseServicio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneDestino -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneDestino">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Vuelo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Ciudad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneEquipaje -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneEquipaje">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boleto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Equipaje"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneHabilitacion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneHabilitacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Piloto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Habilitacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneOrigen -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneOrigen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Vuelo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Ciudad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tienePiloto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tienePiloto">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#trabajaPara"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Aerolinea"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Piloto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#trabajaPara -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#trabajaPara">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Piloto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Aerolinea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#fecha -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#fecha">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Vuelo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#horaLlegada -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#horaLlegada">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Vuelo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#horaSalida -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#horaSalida">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Vuelo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#llevaMascota -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#llevaMascota">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boleto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#precioBase -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#precioBase">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Vuelo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneCapacidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneCapacidad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Avion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneEdad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneEdad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneNombre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tieneNombre">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Aerolinea"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Persona"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tienePeso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#tienePeso">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Equipaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#A320TypeRating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#A320TypeRating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Habilitacion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Adulto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Adulto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Pasajero"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Aerolinea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Aerolinea"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Airbus_A318 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Airbus_A318">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Avion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Airbus_A319 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Airbus_A319">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Avion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Anciano -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Anciano">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Pasajero"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Avion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Avion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#B737TypeRating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#B737TypeRating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Habilitacion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#B777TypeRating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#B777TypeRating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Habilitacion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boeing_737 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boeing_737">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Avion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boeing_777 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boeing_777">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Avion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boleto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Boleto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Ciudad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Ciudad"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#ClaseServicio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#ClaseServicio"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Ejecutiva -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Ejecutiva">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#ClaseServicio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Equipaje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Equipaje"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Habilitacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Habilitacion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Niño -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Niño">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Pasajero"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Pasajero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Pasajero">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Persona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Persona"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Piloto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Piloto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Turista -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Turista">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#ClaseServicio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Vuelo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-43#Vuelo"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

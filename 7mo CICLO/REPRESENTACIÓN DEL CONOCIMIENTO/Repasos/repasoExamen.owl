@@ -1,0 +1,998 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/"
+     xml:base="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:untitled-ontology-47="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#contieneCursos -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#contieneCursos">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#perteneceA"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanDeEstudios"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Curso"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#dicta -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#dicta">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PersonalAcademico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Curso"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#dirige -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#dirige">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#esDirigidoPor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Investigador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#ProyectoInvestigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#enseñaA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#enseñaA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PersonalAcademico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Estudiante"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#esDirigidoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#esDirigidoPor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#ProyectoInvestigacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Investigador"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#especialistaEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#especialistaEn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PersonalAcademico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Curso"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#inscritoEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#inscritoEn">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#tieneInscritoA"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Curso"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#perteneceA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#perteneceA">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#AsignarturaElectiva"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#AsignaturaObligatoria"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Curso"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanDeEstudios"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#tieneInscritoA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#tieneInscritoA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Curso"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Estudiante"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#duracionEnSemestres -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#duracionEnSemestres">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Curso"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#tieneCreditos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#tieneCreditos">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Curso"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#AsignarturaElectiva -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#AsignarturaElectiva">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#perteneceA"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanDeEstudios"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#AsignaturaObligatoria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#AsignaturaObligatoria">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#perteneceA"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanDeEstudios"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Curso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Curso"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#CursoPosgrado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#CursoPosgrado">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Curso"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#tieneCreditos"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#CursoPregrado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#CursoPregrado">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Curso"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#tieneCreditos"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Departamento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Departamento"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Docente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Docente">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#dicta"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#CursoPosgrado"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#CursoPregrado"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PersonalAcademico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Especialista -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Especialista"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Estudiante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Estudiante"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#EstudianteDoctorado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#EstudianteDoctorado">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#inscritoEn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#CursoPosgrado"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Estudiante"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#EstudianteMaestria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#EstudianteMaestria">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#inscritoEn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#CursoPosgrado"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Estudiante"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#EstudiantePregrado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#EstudiantePregrado">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#inscritoEn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#CursoPregrado"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Estudiante"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Investigador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Investigador">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#dicta"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#CursoPosgrado"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#dirige"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#ProyectoInvestigacion"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PersonalAcademico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#InvestigadorActivo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#InvestigadorActivo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PersonalAcademico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PersonalAcademico"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanDeEstudios -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanDeEstudios">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#contieneCursos"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Curso"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#ProyectoInvestigacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#ProyectoInvestigacion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#esDirigidoPor"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Investigador"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#duracionEnSemestres"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#ProyectoInvestigacionCorto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#ProyectoInvestigacionCorto"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#AlgebraLineal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#AlgebraLineal">
+        <untitled-ontology-47:perteneceA rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanEstudiosPregrado"/>
+        <untitled-ontology-47:tieneCreditos rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</untitled-ontology-47:tieneCreditos>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Ana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Ana">
+        <untitled-ontology-47:inscritoEn rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#AlgebraLineal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#DepartamentoCienciasComputacion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#DepartamentoCienciasComputacion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Departamento"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#DepartamentoMatematicas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#DepartamentoMatematicas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Departamento"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Esteban -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Esteban">
+        <untitled-ontology-47:dicta rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#AlgebraLineal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#IntroduccionLogica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#IntroduccionLogica">
+        <untitled-ontology-47:perteneceA rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanEstudiosPregrado"/>
+        <untitled-ontology-47:tieneCreditos rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</untitled-ontology-47:tieneCreditos>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Juan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Juan">
+        <untitled-ontology-47:inscritoEn rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#IntroduccionLogica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Luis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Luis">
+        <untitled-ontology-47:inscritoEn rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#IntroduccionLogica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Maria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Maria">
+        <untitled-ontology-47:inscritoEn rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#MineriaDatos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Mauricio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Mauricio">
+        <untitled-ontology-47:dicta rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#IntroduccionLogica"/>
+        <untitled-ontology-47:dicta rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#RepresentacionConocimiento"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#MineriaDatos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#MineriaDatos">
+        <untitled-ontology-47:perteneceA rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanEstudiosMaestria"/>
+        <untitled-ontology-47:tieneCreditos rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</untitled-ontology-47:tieneCreditos>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Pedro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Pedro">
+        <untitled-ontology-47:inscritoEn rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#MineriaDatos"/>
+        <untitled-ontology-47:inscritoEn rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#RepresentacionConocimiento"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanEstudiosMaestria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanEstudiosMaestria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanDeEstudios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanEstudiosPregrado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanEstudiosPregrado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanDeEstudios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#ProyectoOptimizacionRedes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#ProyectoOptimizacionRedes">
+        <owl:differentFrom rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#ProyectoWebSemantica"/>
+        <untitled-ontology-47:esDirigidoPor rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Mauricio"/>
+        <untitled-ontology-47:duracionEnSemestres rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</untitled-ontology-47:duracionEnSemestres>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#ProyectoWebSemantica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#ProyectoWebSemantica">
+        <untitled-ontology-47:esDirigidoPor rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Mauricio"/>
+        <untitled-ontology-47:duracionEnSemestres rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</untitled-ontology-47:duracionEnSemestres>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#RepresentacionConocimiento -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#RepresentacionConocimiento">
+        <untitled-ontology-47:tieneCreditos rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</untitled-ontology-47:tieneCreditos>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#RepresentacionConocimiento"/>
+        <owl:assertionProperty rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#perteneceA"/>
+        <owl:targetIndividual rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanEstudiosMaestria"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#RepresentacionConocimiento"/>
+        <owl:assertionProperty rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#perteneceA"/>
+        <owl:targetIndividual rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PlanEstudiosPregrado"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Victor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Victor">
+        <untitled-ontology-47:dicta rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#MineriaDatos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/creditos">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/i">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/p1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/p2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/duracion">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/e">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#PersonalAcademico"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Curso"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#dicta"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/p"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#tieneCreditos"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/c"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/creditos"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/creditos"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#especialistaEn"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Investigador"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#CursoPosgrado"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#dicta"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/i"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#dirige"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/i"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/p1"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#dirige"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/i"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/p2"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/p1"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/p2"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#InvestigadorActivo"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#ProyectoInvestigacion"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#Investigador"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/i"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#esDirigidoPor"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/p"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/i"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#duracionEnSemestres"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/p"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/duracion"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/duracion"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                                <swrl:arguments>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/duracion"/>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </swrl:arguments>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#ProyectoInvestigacionCorto"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#inscritoEn"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/e"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#dicta"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47#enseñaA"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/bryan/ontologies/2025/6/untitled-ontology-47/e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

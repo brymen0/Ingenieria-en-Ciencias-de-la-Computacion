@@ -4,3 +4,6 @@
 [submodule "5to CICLO/LENGUAJES DE PROGRAMACIÓN/Trabajo Final/Scala/Mendoza_Bryan_TrabajoFinal"]
 	path = 5to CICLO/LENGUAJES DE PROGRAMACIÓN/Trabajo Final/Scala/Mendoza_Bryan_TrabajoFinal
 	url = https://github.com/brymen0/Sistema-de-Pedidos-de-Restaurante-en-Scala
+[submodule "7mo CICLO/REDES DE COMPUTADORES/Trabajo Final/redes-trabajo-final"]
+	path = 7mo CICLO/REDES DE COMPUTADORES/Trabajo Final/redes-trabajo-final
+	url = https://github.com/brymen0/Algoritmos-de-Redes-de-Computadores
